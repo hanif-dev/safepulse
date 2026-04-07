@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "products": "Products",
+    "impact": "Impact",
+    "evidence": "Evidence",
+    "insights": "Insights",
+    "contact": "Contact Us",
+    "global": "Global",
+    "checker": "Scam Checker",
+    "report": "Report Incident",
+    "dashboard": "Dashboard"
+  },
+  "home": {
+    "hero_title": "Protecting Communities from Digital Threats",
+    "hero_subtitle": "SafePulse is an AI-assisted platform dedicated to detecting scams, preventing radicalization, and building digital resilience across Southeast Asia.",
+    "cta_check": "Check a Scam",
+    "cta_report": "Report Incident",
+    "stat_protected": "People Protected",
+    "stat_incidents": "Incidents Reported",
+    "stat_countries": "Countries Reached",
+    "stat_articles": "Threat Insights"
+  },
+  "products": {
+    "title": "Our Solutions",
+    "subtitle": "Three platforms, one mission: a safer digital world for everyone.",
+    "scam_shield_title": "Scam Shield",
+    "scam_shield_desc": "Real-time analysis of messages, URLs, phone numbers, and bank accounts to detect fraud before it causes harm.",
+    "youth_title": "Youth Peace Hub",
+    "youth_desc": "Curriculum-aligned programs and digital tools that help young people recognise and resist online radicalization.",
+    "ngo_title": "NGO & Government Toolkit",
+    "ngo_desc": "Turnkey awareness campaigns, data dashboards, and community workshop materials for civil-society organizations."
+  },
+  "impact": {
+    "title": "Our Impact",
+    "subtitle": "Measurable change, like a public health intervention.",
+    "people_protected": "People Protected",
+    "incidents_mapped": "Incidents Mapped",
+    "countries": "Countries",
+    "articles": "Insight Articles"
+  },
+  "evidence": {
+    "title": "Evidence & Case Studies",
+    "subtitle": "Our approach is grounded in peer-reviewed research and real-world outcomes."
+  },
+  "insights": {
+    "title": "Insights & Threat Library",
+    "subtitle": "Timely articles, analysis, and educational content.",
+    "search_placeholder": "Search articles…",
+    "filter_category": "Category",
+    "filter_language": "Language",
+    "all_categories": "All Categories",
+    "all_languages": "All Languages",
+    "read_more": "Read more",
+    "no_results": "No articles found matching your search.",
+    "categories": {
+      "scam": "Scam",
+      "radicalization": "Radicalization",
+      "money_laundering": "Money Laundering",
+      "digital_resilience": "Digital Resilience",
+      "youth_peace": "Youth Peace"
+    }
+  },
+  "checker": {
+    "title": "Scam & Risk Checker",
+    "subtitle": "Paste any suspicious content below. Our rule-based engine will analyse it instantly — no data is stored.",
+    "label_message": "Message / Email Body",
+    "label_url": "URL",
+    "label_phone": "Phone Number",
+    "label_account": "Bank Account / Wallet ID",
+    "placeholder_message": "Paste the suspicious message here…",
+    "placeholder_url": "https://suspicious-site.com",
+    "placeholder_phone": "+62 812 3456 7890",
+    "placeholder_account": "Wallet address or account number",
+    "submit": "Analyse Now",
+    "result_title": "Analysis Result",
+    "score_label": "Risk Score",
+    "level_low": "Low Risk",
+    "level_medium": "Medium Risk",
+    "level_high": "High Risk",
+    "reasons_title": "Findings",
+    "loading": "Analysing…"
+  },
+  "incident": {
+    "title": "Report an Incident",
+    "subtitle": "Reports are completely anonymous. Your data helps map threats and protect communities.",
+    "label_category": "Incident Type",
+    "label_country": "Country",
+    "label_age_group": "Your Age Group (optional)",
+    "label_description": "What happened?",
+    "label_impact": "Health/Wellbeing Impact",
+    "label_loss": "Financial Loss Estimate (USD, optional)",
+    "submit": "Submit Report",
+    "success": "Thank you — your report has been submitted anonymously.",
+    "categories": {
+      "phishing": "Phishing",
+      "investment": "Investment / Crypto Fraud",
+      "romance": "Romance Scam",
+      "radicalization": "Radicalization",
+      "money_laundering": "Money Laundering",
+      "other": "Other"
+    },
+    "impact_levels": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Questions, partnerships, media enquiries — we'd love to hear from you.",
+    "label_name": "Name",
+    "label_email": "Email",
+    "label_subject": "Subject",
+    "label_message": "Message",
+    "submit": "Send Message",
+    "success": "Thank you! We will get back to you within 2 business days."
+  },
+  "dashboard": {
+    "title": "Public Health Impact Dashboard",
+    "subtitle": "Live aggregated data from anonymous incident reports.",
+    "by_category": "Incidents by Category",
+    "by_country": "Top Affected Countries",
+    "monthly": "Monthly Trend (Last 12 Months)",
+    "total": "Total Incidents",
+    "high_impact": "High-Impact Incidents",
+    "financial_loss": "Total Reported Loss (USD)",
+    "countries": "Countries Affected"
+  },
+  "accessibility": {
+    "skip": "Skip to content",
+    "theme_toggle": "Toggle dark/light theme",
+    "font_increase": "Increase font size",
+    "font_decrease": "Decrease font size",
+    "tts_play": "Read article aloud",
+    "tts_stop": "Stop reading"
+  },
+  "footer": {
+    "tagline": "Building digital resilience for a safer Southeast Asia.",
+    "links_title": "Quick Links",
+    "legal": "Privacy Policy",
+    "copyright": "© 2024 SafePulse. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong. Please try again.",
+    "back": "Back",
+    "published": "Published"
+  }
+}

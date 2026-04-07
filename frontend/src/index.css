@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Accessibility: visible focus ring everywhere ──────────────────────────── */
+@layer base {
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* High-contrast dark mode base */
+  .dark body {
+    @apply bg-gray-950 text-gray-100;
+  }
+
+  /* Font-size classes applied to <html> by useFontSize hook */
+  html.font-size-md { font-size: 16px; }
+  html.font-size-lg { font-size: 18px; }
+  html.font-size-xl { font-size: 21px; }
+}
+
+/* ── Utility: prose-like markdown rendering ────────────────────────────────── */
+@layer components {
+  .markdown-body h1 { @apply text-3xl font-bold mt-8 mb-4 text-gray-900 dark:text-white; }
+  .markdown-body h2 { @apply text-2xl font-semibold mt-6 mb-3 text-gray-800 dark:text-gray-100; }
+  .markdown-body h3 { @apply text-xl font-semibold mt-5 mb-2 text-gray-800 dark:text-gray-200; }
+  .markdown-body p  { @apply mb-4 leading-relaxed text-gray-700 dark:text-gray-300; }
+  .markdown-body ul { @apply list-disc pl-6 mb-4 space-y-1 text-gray-700 dark:text-gray-300; }
+  .markdown-body ol { @apply list-decimal pl-6 mb-4 space-y-1 text-gray-700 dark:text-gray-300; }
+  .markdown-body li { @apply leading-relaxed; }
+  .markdown-body strong { @apply font-semibold text-gray-900 dark:text-white; }
+  .markdown-body a  { @apply text-primary-600 underline hover:text-primary-800 dark:text-primary-400; }
+  .markdown-body blockquote { @apply border-l-4 border-primary-400 pl-4 italic text-gray-600 dark:text-gray-400 my-4; }
+  .markdown-body hr { @apply border-gray-200 dark:border-gray-700 my-6; }
+  .markdown-body code { @apply bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono; }
+  .markdown-body pre  { @apply bg-gray-900 text-gray-100 rounded-lg p-4 overflow-x-auto mb-4; }
+}

@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "products": "Produk",
+    "impact": "Dampak",
+    "evidence": "Bukti",
+    "insights": "Wawasan",
+    "contact": "Hubungi Kami",
+    "global": "Global",
+    "checker": "Cek Penipuan",
+    "report": "Laporkan Insiden",
+    "dashboard": "Dasbor"
+  },
+  "home": {
+    "hero_title": "Melindungi Komunitas dari Ancaman Digital",
+    "hero_subtitle": "SafePulse adalah platform berbasis AI yang didedikasikan untuk mendeteksi penipuan, mencegah radikalisasi, dan membangun ketahanan digital di seluruh Asia Tenggara.",
+    "cta_check": "Cek Penipuan",
+    "cta_report": "Laporkan Insiden",
+    "stat_protected": "Orang Dilindungi",
+    "stat_incidents": "Insiden Dilaporkan",
+    "stat_countries": "Negara Dijangkau",
+    "stat_articles": "Artikel Wawasan"
+  },
+  "products": {
+    "title": "Solusi Kami",
+    "subtitle": "Tiga platform, satu misi: dunia digital yang lebih aman untuk semua.",
+    "scam_shield_title": "Scam Shield",
+    "scam_shield_desc": "Analisis real-time pesan, URL, nomor telepon, dan rekening bank untuk mendeteksi penipuan sebelum menimbulkan kerugian.",
+    "youth_title": "Youth Peace Hub",
+    "youth_desc": "Program dan alat digital yang membantu anak muda mengenali dan menolak radikalisasi online.",
+    "ngo_title": "Toolkit NGO & Pemerintah",
+    "ngo_desc": "Kampanye kesadaran siap pakai, dasbor data, dan materi lokakarya komunitas untuk organisasi masyarakat sipil."
+  },
+  "impact": {
+    "title": "Dampak Kami",
+    "subtitle": "Perubahan terukur, seperti intervensi kesehatan masyarakat.",
+    "people_protected": "Orang Dilindungi",
+    "incidents_mapped": "Insiden Dipetakan",
+    "countries": "Negara",
+    "articles": "Artikel Wawasan"
+  },
+  "evidence": {
+    "title": "Bukti & Studi Kasus",
+    "subtitle": "Pendekatan kami didasarkan pada penelitian peer-reviewed dan hasil nyata."
+  },
+  "insights": {
+    "title": "Wawasan & Perpustakaan Ancaman",
+    "subtitle": "Artikel, analisis, dan konten edukatif terkini.",
+    "search_placeholder": "Cari artikel…",
+    "filter_category": "Kategori",
+    "filter_language": "Bahasa",
+    "all_categories": "Semua Kategori",
+    "all_languages": "Semua Bahasa",
+    "read_more": "Baca selengkapnya",
+    "no_results": "Tidak ada artikel yang sesuai dengan pencarian Anda.",
+    "categories": {
+      "scam": "Penipuan",
+      "radicalization": "Radikalisasi",
+      "money_laundering": "Pencucian Uang",
+      "digital_resilience": "Ketahanan Digital",
+      "youth_peace": "Perdamaian Pemuda"
+    }
+  },
+  "checker": {
+    "title": "Pemeriksa Penipuan & Risiko",
+    "subtitle": "Tempelkan konten mencurigakan di bawah ini. Mesin berbasis aturan kami akan menganalisisnya secara instan — tidak ada data yang disimpan.",
+    "label_message": "Pesan / Isi Email",
+    "label_url": "URL",
+    "label_phone": "Nomor Telepon",
+    "label_account": "Rekening Bank / ID Dompet",
+    "placeholder_message": "Tempel pesan mencurigakan di sini…",
+    "placeholder_url": "https://situs-mencurigakan.com",
+    "placeholder_phone": "+62 812 3456 7890",
+    "placeholder_account": "Alamat dompet atau nomor rekening",
+    "submit": "Analisis Sekarang",
+    "result_title": "Hasil Analisis",
+    "score_label": "Skor Risiko",
+    "level_low": "Risiko Rendah",
+    "level_medium": "Risiko Sedang",
+    "level_high": "Risiko Tinggi",
+    "reasons_title": "Temuan",
+    "loading": "Menganalisis…"
+  },
+  "incident": {
+    "title": "Laporkan Insiden",
+    "subtitle": "Laporan sepenuhnya anonim. Data Anda membantu memetakan ancaman dan melindungi komunitas.",
+    "label_category": "Jenis Insiden",
+    "label_country": "Negara",
+    "label_age_group": "Kelompok Usia Anda (opsional)",
+    "label_description": "Apa yang terjadi?",
+    "label_impact": "Dampak Kesehatan/Kesejahteraan",
+    "label_loss": "Estimasi Kerugian Finansial (USD, opsional)",
+    "submit": "Kirim Laporan",
+    "success": "Terima kasih — laporan Anda telah dikirimkan secara anonim.",
+    "categories": {
+      "phishing": "Phishing",
+      "investment": "Penipuan Investasi / Kripto",
+      "romance": "Penipuan Romantis",
+      "radicalization": "Radikalisasi",
+      "money_laundering": "Pencucian Uang",
+      "other": "Lainnya"
+    },
+    "impact_levels": {
+      "low": "Rendah",
+      "medium": "Sedang",
+      "high": "Tinggi"
+    }
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Pertanyaan, kemitraan, pertanyaan media — kami ingin mendengar dari Anda.",
+    "label_name": "Nama",
+    "label_email": "Email",
+    "label_subject": "Subjek",
+    "label_message": "Pesan",
+    "submit": "Kirim Pesan",
+    "success": "Terima kasih! Kami akan menghubungi Anda dalam 2 hari kerja."
+  },
+  "dashboard": {
+    "title": "Dasbor Dampak Kesehatan Masyarakat",
+    "subtitle": "Data agregat langsung dari laporan insiden anonim.",
+    "by_category": "Insiden per Kategori",
+    "by_country": "Negara Paling Terdampak",
+    "monthly": "Tren Bulanan (12 Bulan Terakhir)",
+    "total": "Total Insiden",
+    "high_impact": "Insiden Dampak Tinggi",
+    "financial_loss": "Total Kerugian Dilaporkan (USD)",
+    "countries": "Negara Terdampak"
+  },
+  "accessibility": {
+    "skip": "Lewati ke konten",
+    "theme_toggle": "Ganti tema gelap/terang",
+    "font_increase": "Perbesar ukuran font",
+    "font_decrease": "Perkecil ukuran font",
+    "tts_play": "Bacakan artikel",
+    "tts_stop": "Hentikan pembacaan"
+  },
+  "footer": {
+    "tagline": "Membangun ketahanan digital untuk Asia Tenggara yang lebih aman.",
+    "links_title": "Tautan Cepat",
+    "legal": "Kebijakan Privasi",
+    "copyright": "© 2024 SafePulse. Hak cipta dilindungi."
+  },
+  "common": {
+    "loading": "Memuat…",
+    "error": "Terjadi kesalahan. Silakan coba lagi.",
+    "back": "Kembali",
+    "published": "Diterbitkan"
+  }
+}
