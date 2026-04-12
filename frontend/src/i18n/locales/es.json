@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "products": "Productos",
+    "impact": "Impacto",
+    "evidence": "Evidencia",
+    "insights": "Artículos",
+    "contact": "Contacto",
+    "global": "Idioma",
+    "checker": "Detector de estafas",
+    "report": "Reportar incidente",
+    "dashboard": "Panel de control"
+  },
+  "home": {
+    "hero_title": "Protegiendo comunidades de las amenazas digitales",
+    "hero_subtitle": "SafePulse es una plataforma asistida por IA dedicada a detectar estafas, prevenir la radicalización y construir resiliencia digital en el Sudeste Asiático.",
+    "cta_check": "Verificar una estafa",
+    "cta_report": "Reportar un incidente",
+    "stat_protected": "Personas protegidas",
+    "stat_incidents": "Incidentes reportados",
+    "stat_countries": "Países alcanzados",
+    "stat_articles": "Artículos de concientización"
+  },
+  "products": {
+    "title": "Nuestras Soluciones",
+    "subtitle": "Tres plataformas, una misión: un mundo digital más seguro para todos.",
+    "scam_shield_title": "Escudo Anti-Estafas",
+    "scam_shield_desc": "Análisis en tiempo real de mensajes, URL, números de teléfono y cuentas bancarias para detectar fraudes antes de que causen daño.",
+    "youth_title": "Centro de Paz Juvenil",
+    "youth_desc": "Programas y herramientas digitales que ayudan a los jóvenes a reconocer y resistir la radicalización en línea.",
+    "ngo_title": "Kit para ONG y Gobiernos",
+    "ngo_desc": "Campañas de sensibilización listas para usar, paneles de datos y materiales de talleres comunitarios."
+  },
+  "impact": {
+    "title": "Nuestro Impacto",
+    "subtitle": "Cambio medible, como una intervención de salud pública.",
+    "people_protected": "Personas protegidas",
+    "incidents_mapped": "Incidentes mapeados",
+    "countries": "Países",
+    "articles": "Artículos"
+  },
+  "evidence": {
+    "title": "Evidencia y Estudios de Caso",
+    "subtitle": "Nuestro enfoque se basa en investigación revisada por pares y resultados reales."
+  },
+  "insights": {
+    "title": "Artículos y Biblioteca de Amenazas",
+    "subtitle": "Artículos, análisis y contenido educativo oportuno.",
+    "search_placeholder": "Buscar artículos…",
+    "filter_category": "Categoría",
+    "filter_language": "Idioma",
+    "all_categories": "Todas las categorías",
+    "all_languages": "Todos los idiomas",
+    "read_more": "Leer más",
+    "no_results": "No se encontraron artículos que coincidan con tu búsqueda.",
+    "categories": {
+      "scam": "Estafa",
+      "radicalization": "Radicalización",
+      "money_laundering": "Lavado de dinero",
+      "digital_resilience": "Resiliencia digital",
+      "youth_peace": "Paz juvenil"
+    }
+  },
+  "checker": {
+    "title": "Detector de Estafas y Riesgos",
+    "subtitle": "Pega cualquier contenido sospechoso abajo. Nuestro motor lo analizará al instante — no se guardan datos.",
+    "label_message": "Texto del mensaje / Cuerpo del correo",
+    "label_url": "URL",
+    "label_phone": "Número de teléfono",
+    "label_account": "Cuenta bancaria / ID de billetera",
+    "placeholder_message": "Pega aquí el mensaje sospechoso…",
+    "placeholder_url": "https://sitio-sospechoso.com",
+    "placeholder_phone": "+34 6XX XXX XXX",
+    "placeholder_account": "Dirección de billetera o número de cuenta",
+    "submit": "Analizar ahora",
+    "result_title": "Resultado del análisis",
+    "score_label": "Puntuación de riesgo",
+    "level_low": "Riesgo bajo",
+    "level_medium": "Riesgo medio",
+    "level_high": "Riesgo alto",
+    "reasons_title": "Hallazgos",
+    "loading": "Analizando…"
+  },
+  "incident": {
+    "title": "Reportar un Incidente",
+    "subtitle": "Los reportes son completamente anónimos. Tus datos ayudan a mapear amenazas y proteger comunidades.",
+    "label_category": "Tipo de incidente",
+    "label_country": "País",
+    "label_age_group": "Tu rango de edad (opcional)",
+    "label_description": "¿Qué ocurrió?",
+    "label_impact": "Impacto en salud / bienestar",
+    "label_loss": "Pérdida financiera estimada (USD, opcional)",
+    "submit": "Enviar reporte",
+    "success": "Gracias — tu reporte ha sido enviado de forma anónima.",
+    "categories": {
+      "phishing": "Phishing",
+      "investment": "Fraude de inversión / criptomonedas",
+      "romance": "Estafa romántica",
+      "radicalization": "Radicalización",
+      "money_laundering": "Lavado de dinero",
+      "other": "Otro"
+    },
+    "impact_levels": {
+      "low": "Bajo",
+      "medium": "Medio",
+      "high": "Alto"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Preguntas, alianzas, consultas de prensa — nos encantaría escucharte.",
+    "label_name": "Nombre",
+    "label_email": "Correo electrónico",
+    "label_subject": "Asunto",
+    "label_message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "success": "¡Gracias! Te responderemos en 2 días hábiles."
+  },
+  "dashboard": {
+    "title": "Panel de Impacto en Salud Pública",
+    "subtitle": "Datos agregados en tiempo real de reportes anónimos de incidentes.",
+    "by_category": "Incidentes por categoría",
+    "by_country": "Países más afectados",
+    "monthly": "Tendencia mensual (últimos 12 meses)",
+    "total": "Total de incidentes",
+    "high_impact": "Incidentes de alto impacto",
+    "financial_loss": "Pérdidas totales reportadas (USD)",
+    "countries": "Países afectados"
+  },
+  "accessibility": {
+    "skip": "Ir al contenido principal",
+    "theme_toggle": "Cambiar tema oscuro/claro",
+    "font_increase": "Aumentar tamaño de fuente",
+    "font_decrease": "Reducir tamaño de fuente",
+    "tts_play": "Leer artículo en voz alta",
+    "tts_stop": "Detener lectura"
+  },
+  "footer": {
+    "tagline": "Construyendo resiliencia digital para un Sudeste Asiático más seguro.",
+    "links_title": "Enlaces rápidos",
+    "legal": "Política de privacidad",
+    "copyright": "© 2024 SafePulse. Todos los derechos reservados."
+  },
+  "common": {
+    "loading": "Cargando…",
+    "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
+    "back": "Volver",
+    "published": "Publicado el"
+  }
+}

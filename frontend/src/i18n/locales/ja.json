@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "products": "製品",
+    "impact": "実績",
+    "evidence": "エビデンス",
+    "insights": "記事",
+    "contact": "お問い合わせ",
+    "global": "言語",
+    "checker": "詐欺チェッカー",
+    "report": "インシデント報告",
+    "dashboard": "ダッシュボード"
+  },
+  "home": {
+    "hero_title": "デジタル脅威からコミュニティを守る",
+    "hero_subtitle": "SafePulseは、詐欺の検出・過激化の防止・デジタルレジリエンスの構築に特化したAI支援プラットフォームです。東南アジア全域の安全を守ります。",
+    "cta_check": "詐欺を確認する",
+    "cta_report": "インシデントを報告する",
+    "stat_protected": "保護された人数",
+    "stat_incidents": "報告されたインシデント",
+    "stat_countries": "対応国数",
+    "stat_articles": "啓発記事数"
+  },
+  "products": {
+    "title": "ソリューション",
+    "subtitle": "3つのプラットフォーム、1つのミッション：すべての人にとってより安全なデジタル世界。",
+    "scam_shield_title": "詐欺シールド",
+    "scam_shield_desc": "メッセージ・URL・電話番号・銀行口座をリアルタイムで分析し、被害が発生する前に詐欺を検出します。",
+    "youth_title": "ユース・ピース・ハブ",
+    "youth_desc": "若者がオンライン過激化を認識し抵抗するためのプログラムとデジタルツールを提供します。",
+    "ngo_title": "NGO・政府向けツールキット",
+    "ngo_desc": "市民社会組織向けの啓発キャンペーン・データダッシュボード・ワークショップ資料をワンセットで提供します。"
+  },
+  "impact": {
+    "title": "私たちの実績",
+    "subtitle": "公衆衛生介入のように、測定可能な変化をもたらします。",
+    "people_protected": "保護された人数",
+    "incidents_mapped": "記録されたインシデント",
+    "countries": "対応国数",
+    "articles": "記事数"
+  },
+  "evidence": {
+    "title": "エビデンス＆ケーススタディ",
+    "subtitle": "私たちのアプローチは、査読済み研究と実際の成果に基づいています。"
+  },
+  "insights": {
+    "title": "記事＆脅威ライブラリ",
+    "subtitle": "最新の記事・分析・教育コンテンツをお届けします。",
+    "search_placeholder": "記事を検索…",
+    "filter_category": "カテゴリ",
+    "filter_language": "言語",
+    "all_categories": "すべてのカテゴリ",
+    "all_languages": "すべての言語",
+    "read_more": "続きを読む",
+    "no_results": "検索条件に一致する記事が見つかりませんでした。",
+    "categories": {
+      "scam": "詐欺",
+      "radicalization": "過激化",
+      "money_laundering": "マネーロンダリング",
+      "digital_resilience": "デジタルレジリエンス",
+      "youth_peace": "青少年の平和"
+    }
+  },
+  "checker": {
+    "title": "詐欺・リスクチェッカー",
+    "subtitle": "不審なコンテンツを以下に貼り付けてください。ルールベースのエンジンが即座に分析します — データは保存されません。",
+    "label_message": "メッセージ本文 / メール本文",
+    "label_url": "URL",
+    "label_phone": "電話番号",
+    "label_account": "銀行口座 / ウォレットID",
+    "placeholder_message": "不審なメッセージをここに貼り付けてください…",
+    "placeholder_url": "https://不審なサイト.com",
+    "placeholder_phone": "+81 9X-XXXX-XXXX",
+    "placeholder_account": "ウォレットアドレスまたは口座番号",
+    "submit": "今すぐ分析",
+    "result_title": "分析結果",
+    "score_label": "リスクスコア",
+    "level_low": "低リスク",
+    "level_medium": "中リスク",
+    "level_high": "高リスク",
+    "reasons_title": "検出された問題",
+    "loading": "分析中…"
+  },
+  "incident": {
+    "title": "インシデントを報告する",
+    "subtitle": "報告は完全に匿名です。あなたのデータは脅威のマッピングとコミュニティ保護に役立てられます。",
+    "label_category": "インシデントの種類",
+    "label_country": "国",
+    "label_age_group": "年齢層（任意）",
+    "label_description": "何が起きましたか？",
+    "label_impact": "健康・ウェルビーイングへの影響",
+    "label_loss": "推定経済的損失（USD、任意）",
+    "submit": "報告を送信する",
+    "success": "ありがとうございます — 報告が匿名で送信されました。",
+    "categories": {
+      "phishing": "フィッシング",
+      "investment": "投資・暗号資産詐欺",
+      "romance": "ロマンス詐欺",
+      "radicalization": "過激化",
+      "money_laundering": "マネーロンダリング",
+      "other": "その他"
+    },
+    "impact_levels": {
+      "low": "低",
+      "medium": "中",
+      "high": "高"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "ご質問・パートナーシップ・取材のご依頼は、お気軽にご連絡ください。",
+    "label_name": "お名前",
+    "label_email": "メールアドレス",
+    "label_subject": "件名",
+    "label_message": "メッセージ",
+    "submit": "送信する",
+    "success": "ありがとうございます！2営業日以内にご連絡いたします。"
+  },
+  "dashboard": {
+    "title": "公衆衛生インパクト・ダッシュボード",
+    "subtitle": "匿名のインシデント報告からリアルタイムで集計されたデータです。",
+    "by_category": "カテゴリ別インシデント",
+    "by_country": "被害が多い国トップ10",
+    "monthly": "月別トレンド（過去12か月）",
+    "total": "インシデント総数",
+    "high_impact": "高影響インシデント",
+    "financial_loss": "報告された総損失額（USD）",
+    "countries": "被害国数"
+  },
+  "accessibility": {
+    "skip": "メインコンテンツへスキップ",
+    "theme_toggle": "ダーク/ライトテーマの切り替え",
+    "font_increase": "文字サイズを大きくする",
+    "font_decrease": "文字サイズを小さくする",
+    "tts_play": "記事を読み上げる",
+    "tts_stop": "読み上げを停止する"
+  },
+  "footer": {
+    "tagline": "より安全な東南アジアのためにデジタルレジリエンスを構築する。",
+    "links_title": "クイックリンク",
+    "legal": "プライバシーポリシー",
+    "copyright": "© 2024 SafePulse. All rights reserved."
+  },
+  "common": {
+    "loading": "読み込み中…",
+    "error": "エラーが発生しました。もう一度お試しください。",
+    "back": "戻る",
+    "published": "公開日"
+  }
+}

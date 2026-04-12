@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "products": "제품",
+    "impact": "성과",
+    "evidence": "근거",
+    "insights": "인사이트",
+    "contact": "문의하기",
+    "global": "언어",
+    "checker": "사기 탐지기",
+    "report": "사건 신고",
+    "dashboard": "대시보드"
+  },
+  "home": {
+    "hero_title": "디지털 위협으로부터 커뮤니티를 보호합니다",
+    "hero_subtitle": "SafePulse는 동남아시아 전역에서 사기 탐지, 급진화 예방, 디지털 회복력 강화를 위해 AI 기반으로 운영되는 플랫폼입니다.",
+    "cta_check": "사기 여부 확인",
+    "cta_report": "사건 신고하기",
+    "stat_protected": "보호된 사람 수",
+    "stat_incidents": "신고된 사건 수",
+    "stat_countries": "참여 국가 수",
+    "stat_articles": "안전 정보 기사"
+  },
+  "products": {
+    "title": "우리의 솔루션",
+    "subtitle": "세 가지 플랫폼, 하나의 사명: 모두를 위한 더 안전한 디지털 세상.",
+    "scam_shield_title": "사기 방어 쉴드",
+    "scam_shield_desc": "메시지, URL, 전화번호, 은행 계좌를 실시간으로 분석하여 피해 발생 전에 사기를 탐지합니다.",
+    "youth_title": "청소년 평화 허브",
+    "youth_desc": "청소년이 온라인 급진화를 인식하고 저항할 수 있도록 돕는 프로그램과 디지털 도구를 제공합니다.",
+    "ngo_title": "NGO & 정부 툴킷",
+    "ngo_desc": "시민 사회 단체를 위한 즉시 사용 가능한 인식 캠페인, 데이터 대시보드, 지역사회 워크숍 자료를 제공합니다."
+  },
+  "impact": {
+    "title": "우리의 성과",
+    "subtitle": "공중 보건 개입과 같이 측정 가능한 변화를 만듭니다.",
+    "people_protected": "보호된 사람 수",
+    "incidents_mapped": "기록된 사건 수",
+    "countries": "국가",
+    "articles": "기사"
+  },
+  "evidence": {
+    "title": "근거 및 사례 연구",
+    "subtitle": "우리의 접근 방식은 동료 검토 연구와 실제 결과를 기반으로 합니다."
+  },
+  "insights": {
+    "title": "인사이트 & 위협 라이브러리",
+    "subtitle": "시의적절한 기사, 분석, 교육 콘텐츠를 제공합니다.",
+    "search_placeholder": "기사 검색…",
+    "filter_category": "카테고리",
+    "filter_language": "언어",
+    "all_categories": "전체 카테고리",
+    "all_languages": "전체 언어",
+    "read_more": "더 읽기",
+    "no_results": "검색 조건에 맞는 기사가 없습니다.",
+    "categories": {
+      "scam": "사기",
+      "radicalization": "급진화",
+      "money_laundering": "자금 세탁",
+      "digital_resilience": "디지털 회복력",
+      "youth_peace": "청소년 평화"
+    }
+  },
+  "checker": {
+    "title": "사기 및 위험 탐지기",
+    "subtitle": "의심스러운 내용을 아래에 붙여넣으세요. 규칙 기반 엔진이 즉시 분석합니다 — 데이터는 저장되지 않습니다.",
+    "label_message": "메시지 본문 / 이메일 내용",
+    "label_url": "URL",
+    "label_phone": "전화번호",
+    "label_account": "은행 계좌 / 지갑 ID",
+    "placeholder_message": "의심스러운 메시지를 여기에 붙여넣으세요…",
+    "placeholder_url": "https://의심스러운사이트.com",
+    "placeholder_phone": "+82 10-XXXX-XXXX",
+    "placeholder_account": "지갑 주소 또는 계좌번호",
+    "submit": "지금 분석하기",
+    "result_title": "분석 결과",
+    "score_label": "위험 점수",
+    "level_low": "낮은 위험",
+    "level_medium": "중간 위험",
+    "level_high": "높은 위험",
+    "reasons_title": "탐지 결과",
+    "loading": "분석 중…"
+  },
+  "incident": {
+    "title": "사건 신고하기",
+    "subtitle": "신고는 완전히 익명으로 처리됩니다. 귀하의 데이터는 위협 지도를 작성하고 커뮤니티를 보호하는 데 활용됩니다.",
+    "label_category": "사건 유형",
+    "label_country": "국가",
+    "label_age_group": "연령대 (선택 사항)",
+    "label_description": "무슨 일이 있었나요?",
+    "label_impact": "건강 / 웰빙에 미친 영향",
+    "label_loss": "예상 금전적 피해액 (USD, 선택 사항)",
+    "submit": "신고 제출",
+    "success": "감사합니다 — 귀하의 신고가 익명으로 제출되었습니다.",
+    "categories": {
+      "phishing": "피싱",
+      "investment": "투자 / 암호화폐 사기",
+      "romance": "로맨스 사기",
+      "radicalization": "급진화",
+      "money_laundering": "자금 세탁",
+      "other": "기타"
+    },
+    "impact_levels": {
+      "low": "낮음",
+      "medium": "중간",
+      "high": "높음"
+    }
+  },
+  "contact": {
+    "title": "문의하기",
+    "subtitle": "질문, 파트너십, 미디어 문의 — 언제든지 연락해 주세요.",
+    "label_name": "이름",
+    "label_email": "이메일",
+    "label_subject": "제목",
+    "label_message": "메시지",
+    "submit": "메시지 보내기",
+    "success": "감사합니다! 영업일 기준 2일 이내에 답변드리겠습니다."
+  },
+  "dashboard": {
+    "title": "공중 보건 영향 대시보드",
+    "subtitle": "익명 사건 신고에서 실시간으로 집계된 데이터입니다.",
+    "by_category": "카테고리별 사건",
+    "by_country": "가장 많은 피해를 입은 국가",
+    "monthly": "월별 추이 (최근 12개월)",
+    "total": "전체 사건 수",
+    "high_impact": "고영향 사건",
+    "financial_loss": "총 신고된 피해액 (USD)",
+    "countries": "피해 국가 수"
+  },
+  "accessibility": {
+    "skip": "본문으로 이동",
+    "theme_toggle": "다크/라이트 테마 전환",
+    "font_increase": "글꼴 크기 늘리기",
+    "font_decrease": "글꼴 크기 줄이기",
+    "tts_play": "기사 소리 내어 읽기",
+    "tts_stop": "읽기 중지"
+  },
+  "footer": {
+    "tagline": "더 안전한 동남아시아를 위한 디지털 회복력을 구축합니다.",
+    "links_title": "빠른 링크",
+    "legal": "개인정보 처리방침",
+    "copyright": "© 2024 SafePulse. 모든 권리 보유."
+  },
+  "common": {
+    "loading": "로딩 중…",
+    "error": "오류가 발생했습니다. 다시 시도해 주세요.",
+    "back": "뒤로",
+    "published": "게시일"
+  }
+}

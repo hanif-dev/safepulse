@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "products": "Produkte",
+    "impact": "Wirkung",
+    "evidence": "Nachweise",
+    "insights": "Artikel",
+    "contact": "Kontakt",
+    "global": "Sprache",
+    "checker": "Betrugs-Checker",
+    "report": "Vorfall melden",
+    "dashboard": "Dashboard"
+  },
+  "home": {
+    "hero_title": "Gemeinschaften vor digitalen Bedrohungen schützen",
+    "hero_subtitle": "SafePulse ist eine KI-gestützte Plattform zur Erkennung von Betrug, Prävention von Radikalisierung und Stärkung digitaler Resilienz in Südostasien.",
+    "cta_check": "Betrug prüfen",
+    "cta_report": "Vorfall melden",
+    "stat_protected": "Geschützte Personen",
+    "stat_incidents": "Gemeldete Vorfälle",
+    "stat_countries": "Erreichte Länder",
+    "stat_articles": "Aufklärungsartikel"
+  },
+  "products": {
+    "title": "Unsere Lösungen",
+    "subtitle": "Drei Plattformen, eine Mission: eine sicherere digitale Welt für alle.",
+    "scam_shield_title": "Betrugsschutz-Schild",
+    "scam_shield_desc": "Echtzeit-Analyse von Nachrichten, URLs, Telefonnummern und Bankkonten zur Betrugserkennung, bevor Schaden entsteht.",
+    "youth_title": "Jugend-Friedens-Hub",
+    "youth_desc": "Programme und digitale Tools, die jungen Menschen helfen, Online-Radikalisierung zu erkennen und zu widerstehen.",
+    "ngo_title": "NGO & Behörden-Toolkit",
+    "ngo_desc": "Schlüsselfertige Aufklärungskampagnen, Datendashboards und Workshop-Materialien für zivilgesellschaftliche Organisationen."
+  },
+  "impact": {
+    "title": "Unsere Wirkung",
+    "subtitle": "Messbarer Wandel – wie eine Intervention im öffentlichen Gesundheitswesen.",
+    "people_protected": "Geschützte Personen",
+    "incidents_mapped": "Erfasste Vorfälle",
+    "countries": "Länder",
+    "articles": "Artikel"
+  },
+  "evidence": {
+    "title": "Nachweise & Fallstudien",
+    "subtitle": "Unser Ansatz basiert auf peer-reviewed Forschung und realen Ergebnissen."
+  },
+  "insights": {
+    "title": "Artikel & Bedrohungsbibliothek",
+    "subtitle": "Aktuelle Artikel, Analysen und Bildungsinhalte.",
+    "search_placeholder": "Artikel suchen…",
+    "filter_category": "Kategorie",
+    "filter_language": "Sprache",
+    "all_categories": "Alle Kategorien",
+    "all_languages": "Alle Sprachen",
+    "read_more": "Weiterlesen",
+    "no_results": "Keine Artikel gefunden, die Ihrer Suche entsprechen.",
+    "categories": {
+      "scam": "Betrug",
+      "radicalization": "Radikalisierung",
+      "money_laundering": "Geldwäsche",
+      "digital_resilience": "Digitale Resilienz",
+      "youth_peace": "Jugendfrieden"
+    }
+  },
+  "checker": {
+    "title": "Betrugs- und Risikoprüfer",
+    "subtitle": "Fügen Sie unten verdächtige Inhalte ein. Unser regelbasiertes System analysiert sie sofort — keine Daten werden gespeichert.",
+    "label_message": "Nachrichtentext / E-Mail-Inhalt",
+    "label_url": "URL",
+    "label_phone": "Telefonnummer",
+    "label_account": "Bankkonto / Wallet-ID",
+    "placeholder_message": "Verdächtige Nachricht hier einfügen…",
+    "placeholder_url": "https://verdächtige-seite.com",
+    "placeholder_phone": "+49 1XX XXXXXXXX",
+    "placeholder_account": "Wallet-Adresse oder Kontonummer",
+    "submit": "Jetzt analysieren",
+    "result_title": "Analyseergebnis",
+    "score_label": "Risikopunktzahl",
+    "level_low": "Geringes Risiko",
+    "level_medium": "Mittleres Risiko",
+    "level_high": "Hohes Risiko",
+    "reasons_title": "Befunde",
+    "loading": "Wird analysiert…"
+  },
+  "incident": {
+    "title": "Vorfall melden",
+    "subtitle": "Meldungen sind vollständig anonym. Ihre Daten helfen, Bedrohungen zu kartieren und Gemeinschaften zu schützen.",
+    "label_category": "Vorfallsart",
+    "label_country": "Land",
+    "label_age_group": "Ihre Altersgruppe (optional)",
+    "label_description": "Was ist passiert?",
+    "label_impact": "Auswirkung auf Gesundheit / Wohlbefinden",
+    "label_loss": "Geschätzter finanzieller Verlust (USD, optional)",
+    "submit": "Meldung einreichen",
+    "success": "Vielen Dank — Ihre Meldung wurde anonym eingereicht.",
+    "categories": {
+      "phishing": "Phishing",
+      "investment": "Investitions-/Krypto-Betrug",
+      "romance": "Liebesbetrug",
+      "radicalization": "Radikalisierung",
+      "money_laundering": "Geldwäsche",
+      "other": "Sonstiges"
+    },
+    "impact_levels": {
+      "low": "Gering",
+      "medium": "Mittel",
+      "high": "Hoch"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Fragen, Partnerschaften, Presseanfragen — wir freuen uns von Ihnen zu hören.",
+    "label_name": "Name",
+    "label_email": "E-Mail",
+    "label_subject": "Betreff",
+    "label_message": "Nachricht",
+    "submit": "Nachricht senden",
+    "success": "Vielen Dank! Wir melden uns innerhalb von 2 Werktagen."
+  },
+  "dashboard": {
+    "title": "Dashboard zur öffentlichen Gesundheitswirkung",
+    "subtitle": "Live-aggregierte Daten aus anonymen Vorfallsmeldungen.",
+    "by_category": "Vorfälle nach Kategorie",
+    "by_country": "Am stärksten betroffene Länder",
+    "monthly": "Monatlicher Trend (letzte 12 Monate)",
+    "total": "Vorfälle gesamt",
+    "high_impact": "Hochrisiko-Vorfälle",
+    "financial_loss": "Gemeldete Gesamtverluste (USD)",
+    "countries": "Betroffene Länder"
+  },
+  "accessibility": {
+    "skip": "Zum Inhalt springen",
+    "theme_toggle": "Dunkles/helles Design umschalten",
+    "font_increase": "Schriftgröße erhöhen",
+    "font_decrease": "Schriftgröße verringern",
+    "tts_play": "Artikel vorlesen",
+    "tts_stop": "Vorlesen stoppen"
+  },
+  "footer": {
+    "tagline": "Digitale Resilienz für ein sichereres Südostasien aufbauen.",
+    "links_title": "Schnelllinks",
+    "legal": "Datenschutzrichtlinie",
+    "copyright": "© 2024 SafePulse. Alle Rechte vorbehalten."
+  },
+  "common": {
+    "loading": "Wird geladen…",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "back": "Zurück",
+    "published": "Veröffentlicht am"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "products": "產品",
+    "impact": "影響",
+    "evidence": "證據",
+    "insights": "洞察",
+    "contact": "聯絡我們",
+    "global": "語言",
+    "checker": "詐騙檢測",
+    "report": "舉報事件",
+    "dashboard": "數據看板"
+  },
+  "home": {
+    "hero_title": "守護社區免受數位威脅",
+    "hero_subtitle": "SafePulse 是一個由 AI 輔助的平台，致力於檢測詐騙、預防極端化，並在東南亞地區構建數位安全韌性。",
+    "cta_check": "檢測可疑內容",
+    "cta_report": "舉報事件",
+    "stat_protected": "受保護人數",
+    "stat_incidents": "已舉報事件",
+    "stat_countries": "覆蓋國家",
+    "stat_articles": "安全資訊文章"
+  },
+  "products": {
+    "title": "我們的解決方案",
+    "subtitle": "三大平台，一個使命：為所有人創造更安全的數位世界。",
+    "scam_shield_title": "詐騙防護盾",
+    "scam_shield_desc": "對訊息、網址、電話號碼及銀行帳戶進行即時分析，在造成損害之前檢測欺詐行為。",
+    "youth_title": "青年和平中心",
+    "youth_desc": "協助年輕人識別並抵制網路極端化的數位計畫與工具。",
+    "ngo_title": "NGO 與政府工具包",
+    "ngo_desc": "為民間社會組織提供即用型宣傳活動、數據看板及社區工作坊材料。"
+  },
+  "impact": {
+    "title": "我們的影響",
+    "subtitle": "可量化的改變，如同公共衛生干預一般。",
+    "people_protected": "受保護人數",
+    "incidents_mapped": "已記錄事件",
+    "countries": "國家",
+    "articles": "洞察文章"
+  },
+  "evidence": {
+    "title": "證據與案例研究",
+    "subtitle": "我們的方法建立在同儕評審研究和真實成果之上。"
+  },
+  "insights": {
+    "title": "洞察與威脅庫",
+    "subtitle": "及時的文章、分析與教育內容。",
+    "search_placeholder": "搜尋文章…",
+    "filter_category": "分類",
+    "filter_language": "語言",
+    "all_categories": "所有分類",
+    "all_languages": "所有語言",
+    "read_more": "閱讀更多",
+    "no_results": "未找到符合搜尋條件的文章。",
+    "categories": {
+      "scam": "詐騙",
+      "radicalization": "極端化",
+      "money_laundering": "洗錢",
+      "digital_resilience": "數位韌性",
+      "youth_peace": "青年和平"
+    }
+  },
+  "checker": {
+    "title": "詐騙與風險檢測器",
+    "subtitle": "將任何可疑內容貼到下方，我們的規則引擎將即時分析——不儲存任何資料。",
+    "label_message": "訊息文字 / 郵件內容",
+    "label_url": "網址",
+    "label_phone": "電話號碼",
+    "label_account": "銀行帳戶 / 錢包地址",
+    "placeholder_message": "在此貼上可疑訊息…",
+    "placeholder_url": "https://可疑網站.com",
+    "placeholder_phone": "+886 9XX XXX XXX",
+    "placeholder_account": "錢包地址或帳戶號碼",
+    "submit": "立即分析",
+    "result_title": "分析結果",
+    "score_label": "風險評分",
+    "level_low": "低風險",
+    "level_medium": "中風險",
+    "level_high": "高風險",
+    "reasons_title": "檢測發現",
+    "loading": "分析中…"
+  },
+  "incident": {
+    "title": "舉報事件",
+    "subtitle": "舉報完全匿名。您的資料有助於繪製威脅地圖並保護社區。",
+    "label_category": "事件類型",
+    "label_country": "國家",
+    "label_age_group": "您的年齡層（可選）",
+    "label_description": "發生了什麼？",
+    "label_impact": "對健康／身心的影響程度",
+    "label_loss": "估計經濟損失（美元，可選）",
+    "submit": "提交舉報",
+    "success": "感謝您——您的舉報已匿名提交。",
+    "categories": {
+      "phishing": "網路釣魚",
+      "investment": "投資／加密貨幣詐騙",
+      "romance": "戀愛詐騙",
+      "radicalization": "極端化",
+      "money_laundering": "洗錢",
+      "other": "其他"
+    },
+    "impact_levels": {
+      "low": "低",
+      "medium": "中",
+      "high": "高"
+    }
+  },
+  "contact": {
+    "title": "聯絡我們",
+    "subtitle": "問題、合作、媒體諮詢——我們很樂意聽到您的聲音。",
+    "label_name": "姓名",
+    "label_email": "電子郵件",
+    "label_subject": "主旨",
+    "label_message": "訊息",
+    "submit": "傳送訊息",
+    "success": "感謝您！我們將在 2 個工作天內回覆。"
+  },
+  "dashboard": {
+    "title": "公共衛生影響數據看板",
+    "subtitle": "來自匿名事件舉報的即時匯總數據。",
+    "by_category": "依類別統計事件",
+    "by_country": "受影響最多的國家",
+    "monthly": "月度趨勢（過去 12 個月）",
+    "total": "事件總數",
+    "high_impact": "高影響事件",
+    "financial_loss": "總報告損失（美元）",
+    "countries": "受影響國家"
+  },
+  "accessibility": {
+    "skip": "跳至主要內容",
+    "theme_toggle": "切換深色／淺色主題",
+    "font_increase": "放大字體",
+    "font_decrease": "縮小字體",
+    "tts_play": "朗讀文章",
+    "tts_stop": "停止朗讀"
+  },
+  "footer": {
+    "tagline": "為更安全的東南亞構建數位韌性。",
+    "links_title": "快速連結",
+    "legal": "隱私權政策",
+    "copyright": "© 2024 SafePulse。保留所有權利。"
+  },
+  "common": {
+    "loading": "載入中…",
+    "error": "發生錯誤，請重試。",
+    "back": "返回",
+    "published": "發布於"
+  }
+}

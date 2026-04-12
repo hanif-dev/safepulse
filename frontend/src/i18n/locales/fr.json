@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "products": "Produits",
+    "impact": "Impact",
+    "evidence": "Preuves",
+    "insights": "Articles",
+    "contact": "Nous contacter",
+    "global": "Langue",
+    "checker": "Vérificateur d'arnaques",
+    "report": "Signaler un incident",
+    "dashboard": "Tableau de bord"
+  },
+  "home": {
+    "hero_title": "Protéger les communautés contre les menaces numériques",
+    "hero_subtitle": "SafePulse est une plateforme assistée par IA dédiée à la détection des arnaques, à la prévention de la radicalisation et au renforcement de la résilience numérique en Asie du Sud-Est.",
+    "cta_check": "Vérifier une arnaque",
+    "cta_report": "Signaler un incident",
+    "stat_protected": "Personnes protégées",
+    "stat_incidents": "Incidents signalés",
+    "stat_countries": "Pays couverts",
+    "stat_articles": "Articles de sensibilisation"
+  },
+  "products": {
+    "title": "Nos Solutions",
+    "subtitle": "Trois plateformes, une mission : un monde numérique plus sûr pour tous.",
+    "scam_shield_title": "Bouclier Anti-Arnaques",
+    "scam_shield_desc": "Analyse en temps réel des messages, URL, numéros de téléphone et comptes bancaires pour détecter les fraudes avant qu'elles causent des dommages.",
+    "youth_title": "Hub Jeunesse & Paix",
+    "youth_desc": "Programmes et outils numériques aidant les jeunes à reconnaître et résister à la radicalisation en ligne.",
+    "ngo_title": "Kit ONG & Gouvernement",
+    "ngo_desc": "Campagnes de sensibilisation clés en main, tableaux de bord et matériels d'ateliers communautaires pour les organisations de la société civile."
+  },
+  "impact": {
+    "title": "Notre Impact",
+    "subtitle": "Un changement mesurable, comme une intervention de santé publique.",
+    "people_protected": "Personnes protégées",
+    "incidents_mapped": "Incidents cartographiés",
+    "countries": "Pays",
+    "articles": "Articles"
+  },
+  "evidence": {
+    "title": "Preuves & Études de cas",
+    "subtitle": "Notre approche est fondée sur des recherches évaluées par des pairs et des résultats concrets."
+  },
+  "insights": {
+    "title": "Articles & Bibliothèque des menaces",
+    "subtitle": "Articles, analyses et contenus éducatifs actualisés.",
+    "search_placeholder": "Rechercher des articles…",
+    "filter_category": "Catégorie",
+    "filter_language": "Langue",
+    "all_categories": "Toutes les catégories",
+    "all_languages": "Toutes les langues",
+    "read_more": "Lire la suite",
+    "no_results": "Aucun article ne correspond à votre recherche.",
+    "categories": {
+      "scam": "Arnaque",
+      "radicalization": "Radicalisation",
+      "money_laundering": "Blanchiment d'argent",
+      "digital_resilience": "Résilience numérique",
+      "youth_peace": "Paix des jeunes"
+    }
+  },
+  "checker": {
+    "title": "Vérificateur d'arnaques et de risques",
+    "subtitle": "Collez tout contenu suspect ci-dessous. Notre moteur l'analysera instantanément — aucune donnée n'est conservée.",
+    "label_message": "Texte du message / Corps de l'e-mail",
+    "label_url": "URL",
+    "label_phone": "Numéro de téléphone",
+    "label_account": "Compte bancaire / Portefeuille",
+    "placeholder_message": "Collez ici le message suspect…",
+    "placeholder_url": "https://site-suspect.com",
+    "placeholder_phone": "+33 6 XX XX XX XX",
+    "placeholder_account": "Adresse de portefeuille ou numéro de compte",
+    "submit": "Analyser maintenant",
+    "result_title": "Résultat de l'analyse",
+    "score_label": "Score de risque",
+    "level_low": "Risque faible",
+    "level_medium": "Risque moyen",
+    "level_high": "Risque élevé",
+    "reasons_title": "Résultats",
+    "loading": "Analyse en cours…"
+  },
+  "incident": {
+    "title": "Signaler un incident",
+    "subtitle": "Les signalements sont entièrement anonymes. Vos données aident à cartographier les menaces et protéger les communautés.",
+    "label_category": "Type d'incident",
+    "label_country": "Pays",
+    "label_age_group": "Votre tranche d'âge (facultatif)",
+    "label_description": "Que s'est-il passé ?",
+    "label_impact": "Impact sur la santé / le bien-être",
+    "label_loss": "Perte financière estimée (USD, facultatif)",
+    "submit": "Soumettre le signalement",
+    "success": "Merci — votre signalement a été soumis anonymement.",
+    "categories": {
+      "phishing": "Hameçonnage",
+      "investment": "Fraude à l'investissement / crypto",
+      "romance": "Arnaque sentimentale",
+      "radicalization": "Radicalisation",
+      "money_laundering": "Blanchiment d'argent",
+      "other": "Autre"
+    },
+    "impact_levels": {
+      "low": "Faible",
+      "medium": "Moyen",
+      "high": "Élevé"
+    }
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "subtitle": "Questions, partenariats, demandes médias — nous serions ravis de vous entendre.",
+    "label_name": "Nom",
+    "label_email": "E-mail",
+    "label_subject": "Sujet",
+    "label_message": "Message",
+    "submit": "Envoyer le message",
+    "success": "Merci ! Nous vous répondrons dans les 2 jours ouvrés."
+  },
+  "dashboard": {
+    "title": "Tableau de bord d'impact en santé publique",
+    "subtitle": "Données agrégées en direct à partir de signalements anonymes.",
+    "by_category": "Incidents par catégorie",
+    "by_country": "Pays les plus touchés",
+    "monthly": "Tendance mensuelle (12 derniers mois)",
+    "total": "Total des incidents",
+    "high_impact": "Incidents à fort impact",
+    "financial_loss": "Pertes financières totales (USD)",
+    "countries": "Pays touchés"
+  },
+  "accessibility": {
+    "skip": "Aller au contenu",
+    "theme_toggle": "Basculer thème sombre/clair",
+    "font_increase": "Augmenter la taille du texte",
+    "font_decrease": "Réduire la taille du texte",
+    "tts_play": "Lire l'article à voix haute",
+    "tts_stop": "Arrêter la lecture"
+  },
+  "footer": {
+    "tagline": "Renforcer la résilience numérique pour un Asie du Sud-Est plus sûre.",
+    "links_title": "Liens rapides",
+    "legal": "Politique de confidentialité",
+    "copyright": "© 2024 SafePulse. Tous droits réservés."
+  },
+  "common": {
+    "loading": "Chargement…",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "back": "Retour",
+    "published": "Publié le"
+  }
+}

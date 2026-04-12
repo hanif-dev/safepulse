@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "products": "产品",
+    "impact": "影响",
+    "evidence": "证据",
+    "insights": "洞察",
+    "contact": "联系我们",
+    "global": "语言",
+    "checker": "诈骗检测",
+    "report": "举报事件",
+    "dashboard": "数据看板"
+  },
+  "home": {
+    "hero_title": "守护社区免受数字威胁",
+    "hero_subtitle": "SafePulse 是一个由 AI 辅助的平台，致力于检测诈骗、预防极端化，并在东南亚地区构建数字安全韧性。",
+    "cta_check": "检测可疑内容",
+    "cta_report": "举报事件",
+    "stat_protected": "受保护人数",
+    "stat_incidents": "已举报事件",
+    "stat_countries": "覆盖国家",
+    "stat_articles": "安全资讯文章"
+  },
+  "products": {
+    "title": "我们的解决方案",
+    "subtitle": "三大平台，一个使命：为所有人创造更安全的数字世界。",
+    "scam_shield_title": "诈骗防护盾",
+    "scam_shield_desc": "对消息、URL、电话号码及银行账户进行实时分析，在造成损害之前检测欺诈行为。",
+    "youth_title": "青年和平中心",
+    "youth_desc": "帮助年轻人识别并抵制网络极端化的数字项目与工具。",
+    "ngo_title": "NGO 与政府工具包",
+    "ngo_desc": "为民间社会组织提供即用型宣传活动、数据看板及社区工作坊材料。"
+  },
+  "impact": {
+    "title": "我们的影响",
+    "subtitle": "可量化的改变，如同公共卫生干预一般。",
+    "people_protected": "受保护人数",
+    "incidents_mapped": "已记录事件",
+    "countries": "国家",
+    "articles": "洞察文章"
+  },
+  "evidence": {
+    "title": "证据与案例研究",
+    "subtitle": "我们的方法建立在同行评审研究和真实成果之上。"
+  },
+  "insights": {
+    "title": "洞察与威胁库",
+    "subtitle": "及时的文章、分析与教育内容。",
+    "search_placeholder": "搜索文章…",
+    "filter_category": "分类",
+    "filter_language": "语言",
+    "all_categories": "所有分类",
+    "all_languages": "所有语言",
+    "read_more": "阅读更多",
+    "no_results": "未找到符合搜索条件的文章。",
+    "categories": {
+      "scam": "诈骗",
+      "radicalization": "极端化",
+      "money_laundering": "洗钱",
+      "digital_resilience": "数字韧性",
+      "youth_peace": "青年和平"
+    }
+  },
+  "checker": {
+    "title": "诈骗与风险检测器",
+    "subtitle": "将任何可疑内容粘贴到下方，我们的规则引擎将即时分析——不存储任何数据。",
+    "label_message": "消息文本 / 邮件正文",
+    "label_url": "网址",
+    "label_phone": "电话号码",
+    "label_account": "银行账户 / 钱包地址",
+    "placeholder_message": "在此粘贴可疑消息…",
+    "placeholder_url": "https://可疑网站.com",
+    "placeholder_phone": "+86 1XX XXXX XXXX",
+    "placeholder_account": "钱包地址或账户号码",
+    "submit": "立即分析",
+    "result_title": "分析结果",
+    "score_label": "风险评分",
+    "level_low": "低风险",
+    "level_medium": "中风险",
+    "level_high": "高风险",
+    "reasons_title": "检测发现",
+    "loading": "分析中…"
+  },
+  "incident": {
+    "title": "举报事件",
+    "subtitle": "举报完全匿名。您的数据有助于绘制威胁地图并保护社区。",
+    "label_category": "事件类型",
+    "label_country": "国家",
+    "label_age_group": "您的年龄段（可选）",
+    "label_description": "发生了什么？",
+    "label_impact": "对健康/身心的影响程度",
+    "label_loss": "估计经济损失（美元，可选）",
+    "submit": "提交举报",
+    "success": "感谢您——您的举报已匿名提交。",
+    "categories": {
+      "phishing": "网络钓鱼",
+      "investment": "投资/加密货币诈骗",
+      "romance": "恋爱诈骗",
+      "radicalization": "极端化",
+      "money_laundering": "洗钱",
+      "other": "其他"
+    },
+    "impact_levels": {
+      "low": "低",
+      "medium": "中",
+      "high": "高"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "问题、合作、媒体咨询——我们很乐意听到您的声音。",
+    "label_name": "姓名",
+    "label_email": "电子邮件",
+    "label_subject": "主题",
+    "label_message": "消息",
+    "submit": "发送消息",
+    "success": "感谢您！我们将在 2 个工作日内回复。"
+  },
+  "dashboard": {
+    "title": "公共卫生影响数据看板",
+    "subtitle": "来自匿名事件举报的实时汇总数据。",
+    "by_category": "按类别统计事件",
+    "by_country": "受影响最多的国家",
+    "monthly": "月度趋势（过去12个月）",
+    "total": "事件总数",
+    "high_impact": "高影响事件",
+    "financial_loss": "总报告损失（美元）",
+    "countries": "受影响国家"
+  },
+  "accessibility": {
+    "skip": "跳转至主要内容",
+    "theme_toggle": "切换深色/浅色主题",
+    "font_increase": "增大字体",
+    "font_decrease": "减小字体",
+    "tts_play": "朗读文章",
+    "tts_stop": "停止朗读"
+  },
+  "footer": {
+    "tagline": "为更安全的东南亚构建数字韧性。",
+    "links_title": "快速链接",
+    "legal": "隐私政策",
+    "copyright": "© 2024 SafePulse。保留所有权利。"
+  },
+  "common": {
+    "loading": "加载中…",
+    "error": "出现错误，请重试。",
+    "back": "返回",
+    "published": "发布于"
+  }
+}
