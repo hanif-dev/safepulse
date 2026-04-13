@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-// Semua teks di komponen ini menggunakan t() — tidak ada string hardcoded.
-// Tambahkan terjemahan baru di src/i18n/locales/*.json
-
 export default function Home() {
   const { t } = useTranslation();
 
-  // ── Data dari translation keys ───────────────────────────────────────────
   const IMPACT_STATS = [
     { key: "stat_protected", value: "2.4M+", icon: "🛡️" },
     { key: "stat_incidents", value: "18,500+", icon: "📋" },
@@ -82,7 +78,6 @@ export default function Home() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            {/* Badge */}
             <span className="inline-block bg-primary-700/60 text-primary-200 text-xs font-semibold px-3 py-1 rounded-full mb-6 tracking-widest uppercase">
               {t("home.hero_badge")}
             </span>
@@ -95,20 +90,20 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/check"
-                className="inline-flex items-center gap-2 bg-white text-primary-800 font-bold px-6 py-3 rounded-xl hover:bg-primary-50 transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 bg-white text-primary-900 font-bold px-6 py-3 rounded-xl hover:bg-primary-50 transition-colors shadow-lg"
               >
                 🔍 {t("home.cta_check")}
               </Link>
               <Link
                 to="/report"
-                className="inline-flex items-center gap-2 bg-primary-700/50 border border-primary-500 text-white font-semibold px-6 py-3 rounded-xl hover:bg-primary-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-primary-700/50 border border-primary-400 text-white font-semibold px-6 py-3 rounded-xl hover:bg-primary-700 transition-colors"
               >
                 📋 {t("home.cta_report")}
               </Link>
             </div>
           </div>
 
-          {/* Decorative panel — semua label dari terjemahan */}
+          {/* Decorative panel */}
           <div className="hidden md:flex justify-center">
             <div className="bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-8 w-80 space-y-4">
               {HERO_ITEMS.map((item) => (
@@ -191,19 +186,25 @@ export default function Home() {
       </section>
 
       {/* ── CTA banner ─────────────────────────────────────────────────────── */}
+      {/*
+        FIX: tombol sebelumnya pakai text-accent-700 yang tidak kontras di atas white.
+        Sekarang pakai text-gray-900 (hitam pekat) + ring border + shadow agar selalu
+        terbaca di semua tema (light/dark/high-contrast).
+      */}
       <section className="bg-accent-500 dark:bg-accent-600 py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">
             {t("home.cta_banner_title")}
           </h2>
-          <p className="text-accent-100 mb-8 text-lg">
+          <p className="text-accent-50 mb-8 text-lg leading-relaxed">
             {t("home.cta_banner_subtitle")}
           </p>
           <Link
             to="/dashboard"
-            className="inline-flex items-center gap-2 bg-white text-accent-700 font-bold px-8 py-3 rounded-xl hover:bg-gray-50 transition-colors shadow-lg"
+            className="inline-flex items-center gap-2.5 bg-white text-gray-900 font-bold px-8 py-3.5 rounded-xl shadow-xl hover:bg-gray-50 active:scale-95 transition-all ring-2 ring-white/40"
           >
-            📊 {t("home.cta_banner_button")}
+            <span aria-hidden="true">📊</span>
+            {t("home.cta_banner_button")}
           </Link>
         </div>
       </section>
