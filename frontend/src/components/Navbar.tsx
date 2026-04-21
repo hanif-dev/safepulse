@@ -10,8 +10,6 @@ interface NavbarProps {
   fontSize: ReturnType<typeof useFontSize>;
 }
 
-// ── Language registry ───────────────────────────────────────────────────────
-// Untuk tambah bahasa baru: tambah entri di sini + buat JSON + daftarkan di index.ts
 const LANGUAGES = [
   {
     code: "en",
@@ -106,7 +104,6 @@ export default function Navbar({ theme, toggleTheme, fontSize }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
 
-  // ── Terapkan RTL ke <html> saat bahasa berubah ──────────────────────────
   const applyDir = (lng: string) => {
     const isRTL = RTL_LANGS.has(lng);
     document.documentElement.setAttribute("dir", isRTL ? "rtl" : "ltr");
@@ -169,6 +166,9 @@ export default function Navbar({ theme, toggleTheme, fontSize }: NavbarProps) {
           <NavLink to="/dashboard" className={navLinkClass} role="menuitem">
             {t("nav.dashboard")}
           </NavLink>
+          <NavLink to="/seo-geo" className={navLinkClass} role="menuitem">
+            {t("nav.seo_geo")}
+          </NavLink>
           <NavLink to="/contact" className={navLinkClass} role="menuitem">
             {t("nav.contact")}
           </NavLink>
@@ -208,7 +208,7 @@ export default function Navbar({ theme, toggleTheme, fontSize }: NavbarProps) {
             {theme === "dark" ? "☀️" : "🌙"}
           </button>
 
-          {/* ── Language picker ─────────────────────────────────────────── */}
+          {/* Language picker */}
           <div className="relative">
             <button
               onClick={() => setLangOpen((o) => !o)}
@@ -217,7 +217,6 @@ export default function Navbar({ theme, toggleTheme, fontSize }: NavbarProps) {
               aria-label={t("nav.global")}
               className="flex items-center gap-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 px-2 py-1.5 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary-400 transition-colors"
             >
-              {/* Aksara Jawa butuh font khusus — tampilkan flag saja jika teks tidak render */}
               <span aria-hidden="true" className="text-base">
                 {currentLang.flag}
               </span>
@@ -239,19 +238,16 @@ export default function Navbar({ theme, toggleTheme, fontSize }: NavbarProps) {
 
             {langOpen && (
               <>
-                {/* Backdrop */}
                 <div
                   className="fixed inset-0 z-40"
                   onClick={() => setLangOpen(false)}
                   aria-hidden="true"
                 />
-
                 <ul
                   role="listbox"
                   aria-label="Select language"
                   className="absolute right-0 mt-2 w-60 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl shadow-2xl py-1 z-50 max-h-[80vh] overflow-y-auto"
                 >
-                  {/* Grouped header */}
                   {[
                     {
                       group: "Latin script",
@@ -358,13 +354,13 @@ export default function Navbar({ theme, toggleTheme, fontSize }: NavbarProps) {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950 px-4 pb-6">
-          {/* Nav links */}
           {[
             ["/products", t("nav.products")],
             ["/impact", t("nav.impact")],
             ["/evidence", t("nav.evidence")],
             ["/insights", t("nav.insights")],
             ["/dashboard", t("nav.dashboard")],
+            ["/seo-geo", t("nav.seo_geo")],
             ["/contact", t("nav.contact")],
             ["/check", t("nav.checker")],
             ["/report", t("nav.report")],
