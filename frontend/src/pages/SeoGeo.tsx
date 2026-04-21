@@ -3,6 +3,7 @@
 // Route: /seo-geo
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 /* ─── animated counter ─── */
 function useCounter(target: number, duration = 1800) {
@@ -26,7 +27,7 @@ function useCounter(target: number, duration = 1800) {
           requestAnimationFrame(tick);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -35,12 +36,21 @@ function useCounter(target: number, duration = 1800) {
   return { value, ref };
 }
 
-function AnimStat({ value, suffix, label }: { value: number; suffix: string; label: string }) {
+function AnimStat({
+  value,
+  suffix,
+  label,
+}: {
+  value: number;
+  suffix: string;
+  label: string;
+}) {
   const { value: v, ref } = useCounter(value);
   return (
     <div ref={ref} className="text-center">
       <div className="text-4xl font-black text-emerald-400 tabular-nums">
-        {v.toLocaleString()}{suffix}
+        {v.toLocaleString()}
+        {suffix}
       </div>
       <div className="text-sm text-slate-400 mt-1">{label}</div>
     </div>
@@ -55,7 +65,15 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-function KwRow({ kw, vol, intent }: { kw: string; vol: string; intent: string }) {
+function KwRow({
+  kw,
+  vol,
+  intent,
+}: {
+  kw: string;
+  vol: string;
+  intent: string;
+}) {
   const intentColor =
     intent === "Informational"
       ? "bg-blue-900/60 text-blue-300"
@@ -64,27 +82,47 @@ function KwRow({ kw, vol, intent }: { kw: string; vol: string; intent: string })
     <tr className="border-b border-slate-800 hover:bg-slate-800/40 transition-colors">
       <td className="py-2.5 px-3 text-slate-200 text-sm font-mono">{kw}</td>
       <td className="py-2.5 px-3 text-center">
-        <span className={`text-xs px-2 py-0.5 rounded-full ${
-          vol === "High" ? "bg-emerald-900/60 text-emerald-300" :
-          vol === "Medium" ? "bg-yellow-900/60 text-yellow-300" :
-          "bg-slate-700 text-slate-400"
-        }`}>{vol}</span>
+        <span
+          className={`text-xs px-2 py-0.5 rounded-full ${
+            vol === "High"
+              ? "bg-emerald-900/60 text-emerald-300"
+              : vol === "Medium"
+                ? "bg-yellow-900/60 text-yellow-300"
+                : "bg-slate-700 text-slate-400"
+          }`}
+        >
+          {vol}
+        </span>
       </td>
       <td className="py-2.5 px-3 text-center">
-        <span className={`text-xs px-2 py-0.5 rounded-full ${intentColor}`}>{intent}</span>
+        <span className={`text-xs px-2 py-0.5 rounded-full ${intentColor}`}>
+          {intent}
+        </span>
       </td>
     </tr>
   );
 }
 
-function GeoCard({ icon, title, items, color, titleColor }: {
-  icon: string; title: string; items: string[]; color: string; titleColor: string;
+function GeoCard({
+  icon,
+  title,
+  items,
+  color,
+  titleColor,
+}: {
+  icon: string;
+  title: string;
+  items: string[];
+  color: string;
+  titleColor: string;
 }) {
   return (
     <div className={`rounded-2xl border ${color} p-6`}>
       <div className="flex items-center gap-2 mb-4">
         <span className="text-2xl">{icon}</span>
-        <h3 className={`font-black text-lg tracking-widest ${titleColor}`}>{title}</h3>
+        <h3 className={`font-black text-lg tracking-widest ${titleColor}`}>
+          {title}
+        </h3>
       </div>
       <ul className="space-y-2">
         {items.map((it, i) => (
@@ -98,8 +136,18 @@ function GeoCard({ icon, title, items, color, titleColor }: {
   );
 }
 
-function EthicCard({ icon, title, items, color, titleColor }: {
-  icon: string; title: string; items: string[]; color: string; titleColor: string;
+function EthicCard({
+  icon,
+  title,
+  items,
+  color,
+  titleColor,
+}: {
+  icon: string;
+  title: string;
+  items: string[];
+  color: string;
+  titleColor: string;
 }) {
   return (
     <div className={`rounded-2xl border ${color} bg-slate-900/30 p-6`}>
@@ -119,10 +167,114 @@ function EthicCard({ icon, title, items, color, titleColor }: {
   );
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════ */
+
 export default function SeoGeo() {
+  const { t } = useTranslation();
+
+  // ── Static data — technical content intentionally stays in English ────────
+
+  const GEO_ENTITIES = [
+    "SafePulse Platform (digital safety tool)",
+    "Online Scams: phishing, investment, romance",
+    "Radicalization (online extremism)",
+    "Money Mule Networks",
+    "Southeast Asia (geographic context)",
+    "Youth & Vulnerable Communities",
+  ];
+
+  const GEO_OUTCOMES = [
+    "User recognises 5+ scam types by pattern",
+    "User knows emergency steps if targeted",
+    "Pages rank for protective queries",
+    "Content cited by AI search engines",
+    "Community reports incidents anonymously",
+    "NGOs leverage SafePulse data",
+  ];
+
+  const GEO_CLARITY = [
+    "One page = one dominant intent",
+    "URL: /insights/how-to-identify-online-scams",
+    "H1 directly answers the primary keyword",
+    "Answer Capsule above fold for AI extraction",
+    "FAQ schema covers long-tail questions",
+    "Content verified by public health researchers",
+  ];
+
+  const AI_DOES = [
+    "Generates 3 headline options per element",
+    "Produces initial blog draft (~900 words)",
+    "Suggests 5 tightening edits for review",
+    "Proposes JSON-LD schema structure",
+    "Generates translations for 12 languages",
+    "Creates FAQ ideas from keyword research",
+  ];
+
+  const HUMAN_DECIDES = [
+    "Chooses best headline from 3 AI options",
+    "Edits intro — selects problem/solution style",
+    "Verifies factual claims against official sources",
+    "Removes culturally insensitive phrases (AR/JV)",
+    "Manual JSON-LD validation in Google Rich Results",
+    "Sets keyword density — never forced",
+  ];
+
+  const AI_NEVER = [
+    "Publish without human review",
+    "Fabricate statistics or citations",
+    "Copy competitor content",
+    "Ignore SafePulse brand voice",
+    "Unilaterally decide language priorities",
+    "Define the GEO entity framework",
+  ];
+
+  const SKILLS = [
+    "Keyword cluster strategy with intent classification",
+    "GEO entity + outcome framework on a real product",
+    "AI-assisted on-page refinement with full editorial control",
+    "Readability calibration FK 60–70 across 12 languages",
+    "JSON-LD schema (Article + FAQPage) with trust signals",
+    "Full-stack deployment: Codespaces → EC2 → Amplify + HTTPS",
+    "Anonymous incident data → public health dashboard",
+    "WCAG 2.1 AA accessibility + RTL support (Arabic)",
+  ];
+
+  const BEFORE_AFTER = [
+    {
+      element: "Title Tag",
+      before: "Online Scams Southeast Asia — SafePulse",
+      after: "How to Identify Online Scams in Southeast Asia | SafePulse",
+      note: "Added action verb 'How to' + kept ≤65 chars",
+    },
+    {
+      element: "Meta Description",
+      before:
+        "SafePulse helps you avoid online scams. Learn about phishing and more.",
+      after:
+        "Protect yourself and your family from phishing, investment fraud, and romance scams across SEA. Spot the 5 warning signs now — free, anonymous tool included.",
+      note: "150–160 chars, benefit-led, CTA included",
+    },
+    {
+      element: "H1",
+      before: "How to Identify Online Scams Southeast Asia",
+      after:
+        "Scams, Fraud & Online Threats: What Every Person in SEA Needs to Know",
+      note: "Natural language, emotional relevance, primary keyword embedded organically",
+    },
+    {
+      element: "Blog Intro — Flesch-Kincaid Score 64",
+      before:
+        "Online scams are a prevalent issue in Southeast Asia, affecting millions annually across various digital channels.",
+      after:
+        "Every day, someone in Southeast Asia clicks a link that empties their savings. You don't have to be the next victim — this guide shows you exactly how to spot the trap before it springs.",
+      note: "FK Score 64 · Narrative-driven · Problem/solution framing chosen over two other options",
+    },
+  ];
+
+  // ──────────────────────────────────────────────────────────────────────────
+
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-
       {/* ── HERO ── */}
       <section className="relative overflow-hidden">
         <div
@@ -138,7 +290,7 @@ export default function SeoGeo() {
         <div className="relative max-w-5xl mx-auto px-6 pt-24 pb-20 text-center">
           <div className="inline-flex items-center gap-2 text-xs font-mono bg-slate-900 border border-slate-700 text-slate-400 px-4 py-1.5 rounded-full mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Digital Safety Platform · Anti-Scam · Southeast Asia
+            {t("seo_geo.badge")}
           </div>
 
           <h1 className="text-5xl sm:text-6xl font-black tracking-tight mb-4">
@@ -148,69 +300,92 @@ export default function SeoGeo() {
             <span className="text-slate-500 mx-2">·</span>
             <span className="text-white">GenAI</span>
           </h1>
+
           <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-3">
-            Content Strategy untuk SafePulse
+            {t("seo_geo.page_title")}
           </p>
           <p className="text-sm text-slate-500 mb-10 max-w-2xl mx-auto">
-            Bagaimana keyword strategy, GEO entity-outcome thinking, dan AI-assisted workflow
-            diterapkan secara nyata pada platform anti-scam untuk komunitas rentan di Asia Tenggara.
+            {t("seo_geo.description")}
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
-            <AnimStat value={2400000} suffix="+" label="People Protected" />
-            <AnimStat value={14} suffix="" label="Articles Published" />
-            <AnimStat value={12} suffix="" label="Languages" />
-            <AnimStat value={8} suffix="" label="Countries Covered" />
+            <AnimStat
+              value={2400000}
+              suffix="+"
+              label={t("seo_geo.stat_protected")}
+            />
+            <AnimStat value={14} suffix="" label={t("seo_geo.stat_articles")} />
+            <AnimStat
+              value={12}
+              suffix=""
+              label={t("seo_geo.stat_languages")}
+            />
+            <AnimStat value={8} suffix="" label={t("seo_geo.stat_countries")} />
           </div>
         </div>
       </section>
 
       {/* ── APPROACH ── */}
       <section className="max-w-5xl mx-auto px-6 py-16">
-        <SectionLabel>Pendekatan Strategi</SectionLabel>
-        <h2 className="text-3xl font-bold mb-4">Tiga Lapisan Strategi Konten</h2>
+        <SectionLabel>{t("seo_geo.approach_title")}</SectionLabel>
+        <h2 className="text-3xl font-bold mb-4">
+          {t("seo_geo.approach_subtitle")}
+        </h2>
         <p className="text-slate-400 mb-10 max-w-2xl">
-          SafePulse membutuhkan konten yang bisa dibaca manusia, ditemukan search engine,
-          dan dikutip oleh AI language model. Ketiga lapisan ini dibangun secara bersamaan.
+          {t("seo_geo.approach_desc")}
         </p>
 
         <div className="grid sm:grid-cols-3 gap-6">
           {[
             {
               icon: "🔑",
-              title: "Keyword Strategy",
+              titleKey: "keyword_title",
+              descKey: "keyword_desc",
               color: "border-blue-800/50 bg-blue-950/10",
               titleColor: "text-blue-300",
-              desc: "Pemetaan keyword cluster berbasis search intent — dari keyword primer hingga long-tail queries yang relevan untuk audiens SEA.",
-              tags: ["Keyword Clustering", "Intent Mapping", "On-Page Structure"],
+              tags: [
+                "Keyword Clustering",
+                "Intent Mapping",
+                "On-Page Structure",
+              ],
             },
             {
               icon: "🌍",
-              title: "GEO Thinking",
+              titleKey: "geo_title",
+              descKey: "geo_desc",
               color: "border-emerald-800/50 bg-emerald-950/10",
               titleColor: "text-emerald-300",
-              desc: "Framework Entity–Outcome–Clarity agar konten dapat dikutip oleh AI search engine seperti Perplexity, ChatGPT, dan Google AI Overview.",
               tags: ["Entity Mapping", "Answer Capsule", "AI-Citability"],
             },
             {
               icon: "🤖",
-              title: "GenAI Workflow",
+              titleKey: "genai_title",
+              descKey: "genai_desc",
               color: "border-violet-800/50 bg-violet-950/10",
               titleColor: "text-violet-300",
-              desc: "AI mempercepat ideasi dan drafting — manusia memegang keputusan editorial, akurasi fakta, dan sensitivitas budaya.",
               tags: ["AI-Assisted Drafting", "Human Editing", "FK 60–70"],
             },
-          ].map((col, i) => (
-            <div key={i} className={`rounded-2xl border ${col.color} p-6 flex flex-col gap-4`}>
+          ].map((col) => (
+            <div
+              key={col.titleKey}
+              className={`rounded-2xl border ${col.color} p-6 flex flex-col gap-4`}
+            >
               <div className="flex items-center gap-3">
                 <span className="text-3xl">{col.icon}</span>
-                <h3 className={`font-bold text-lg ${col.titleColor}`}>{col.title}</h3>
+                <h3 className={`font-bold text-lg ${col.titleColor}`}>
+                  {t(`seo_geo.${col.titleKey}`)}
+                </h3>
               </div>
-              <p className="text-sm text-slate-400 leading-relaxed flex-1">{col.desc}</p>
+              <p className="text-sm text-slate-400 leading-relaxed flex-1">
+                {t(`seo_geo.${col.descKey}`)}
+              </p>
               <div className="flex flex-wrap gap-2">
-                {col.tags.map((t) => (
-                  <span key={t} className="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full">
-                    {t}
+                {col.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full"
+                  >
+                    {tag}
                   </span>
                 ))}
               </div>
@@ -223,19 +398,21 @@ export default function SeoGeo() {
       <section className="bg-slate-900/40 py-16">
         <div className="max-w-5xl mx-auto px-6">
           <SectionLabel>Keyword Strategy</SectionLabel>
-          <h2 className="text-3xl font-bold mb-8">Keyword Cluster &amp; Search Intent Mapping</h2>
+          <h2 className="text-3xl font-bold mb-8">
+            Keyword Cluster &amp; Search Intent Mapping
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="rounded-2xl border border-emerald-800/60 bg-emerald-950/30 p-6">
               <div className="text-xs font-mono text-emerald-500 uppercase tracking-widest mb-2">
-                Primary Keyword
+                {t("seo_geo.primary_keyword")}
               </div>
               <div className="text-lg font-bold text-white mb-3 font-mono">
                 "how to identify online scams southeast asia"
               </div>
               <div className="flex gap-3 flex-wrap mb-5">
                 <span className="text-xs bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">
-                  Informational Intent
+                  {t("seo_geo.informational_intent")}
                 </span>
                 <span className="text-xs bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full">
                   Protective How-to
@@ -243,8 +420,8 @@ export default function SeoGeo() {
               </div>
               <div className="space-y-2 text-sm text-slate-400 border-t border-emerald-900/50 pt-4">
                 {[
-                  "Title Tag 62 chars — keyword di posisi pertama",
-                  "H1 human-first, bukan keyword-stuffed",
+                  "Title Tag 62 chars — keyword in first position",
+                  "H1 human-first, not keyword-stuffed",
                   "URL slug: /insights/how-to-identify-online-scams",
                   "Meta description 150–160 chars, benefit-led",
                 ].map((item, i) => (
@@ -260,20 +437,54 @@ export default function SeoGeo() {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-slate-700 text-xs font-mono text-slate-500 uppercase tracking-wider">
-                    <th className="text-left py-2.5 px-3">Supporting Keywords</th>
+                    <th className="text-left py-2.5 px-3">
+                      {t("seo_geo.supporting_keywords")}
+                    </th>
                     <th className="py-2.5 px-3">Vol</th>
                     <th className="py-2.5 px-3">Intent</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <KwRow kw="online scam warning signs" vol="High" intent="Informational" />
-                  <KwRow kw="phishing scam detection" vol="High" intent="Informational" />
-                  <KwRow kw="investment fraud red flags" vol="High" intent="Investigative" />
-                  <KwRow kw="digital safety tips youth" vol="Medium" intent="Informational" />
-                  <KwRow kw="romance scam recovery" vol="Medium" intent="Informational" />
-                  <KwRow kw="money mule recruitment signs" vol="Medium" intent="Investigative" />
-                  <KwRow kw="radicalization warning signs" vol="Medium" intent="Investigative" />
-                  <KwRow kw="safe internet practices SEA" vol="Low" intent="Informational" />
+                  <KwRow
+                    kw="online scam warning signs"
+                    vol="High"
+                    intent="Informational"
+                  />
+                  <KwRow
+                    kw="phishing scam detection"
+                    vol="High"
+                    intent="Informational"
+                  />
+                  <KwRow
+                    kw="investment fraud red flags"
+                    vol="High"
+                    intent="Investigative"
+                  />
+                  <KwRow
+                    kw="digital safety tips youth"
+                    vol="Medium"
+                    intent="Informational"
+                  />
+                  <KwRow
+                    kw="romance scam recovery"
+                    vol="Medium"
+                    intent="Informational"
+                  />
+                  <KwRow
+                    kw="money mule recruitment signs"
+                    vol="Medium"
+                    intent="Investigative"
+                  />
+                  <KwRow
+                    kw="radicalization warning signs"
+                    vol="Medium"
+                    intent="Investigative"
+                  />
+                  <KwRow
+                    kw="safe internet practices SEA"
+                    vol="Low"
+                    intent="Informational"
+                  />
                 </tbody>
               </table>
             </div>
@@ -284,54 +495,36 @@ export default function SeoGeo() {
       {/* ── GEO THINKING ── */}
       <section className="max-w-5xl mx-auto px-6 py-16">
         <SectionLabel>GEO Thinking</SectionLabel>
-        <h2 className="text-3xl font-bold mb-3">Entity · Outcome · Clarity Framework</h2>
+        <h2 className="text-3xl font-bold mb-3">
+          {t("seo_geo.entity_label")} · {t("seo_geo.outcome_label")} ·{" "}
+          {t("seo_geo.clarity_label")} Framework
+        </h2>
         <p className="text-slate-400 mb-8 max-w-2xl">
-          GEO (Generative Engine Optimisation) memastikan konten SafePulse dapat dikutip oleh
-          AI search engines — bukan hanya ditemukan oleh Google.
+          GEO (Generative Engine Optimisation) ensures SafePulse content can be
+          cited by AI search engines — not just found by Google.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">
           <GeoCard
             icon="🏷️"
-            title="ENTITY"
+            title={t("seo_geo.entity_label").toUpperCase()}
             color="border-blue-700/40 bg-blue-950/20"
             titleColor="text-blue-300"
-            items={[
-              "SafePulse Platform (digital safety tool)",
-              "Online Scams: phishing, investment, romance",
-              "Radikalisasi (online extremism)",
-              "Money Mule Networks",
-              "Southeast Asia (geographic context)",
-              "Youth & Vulnerable Communities",
-            ]}
+            items={GEO_ENTITIES}
           />
           <GeoCard
             icon="🎯"
-            title="OUTCOME"
+            title={t("seo_geo.outcome_label").toUpperCase()}
             color="border-emerald-700/40 bg-emerald-950/20"
             titleColor="text-emerald-300"
-            items={[
-              "User mengenali 5+ jenis scam berdasarkan pola",
-              "User tahu langkah darurat jika jadi korban",
-              "Halaman ranking untuk protective queries",
-              "Konten dikutip oleh AI search engines",
-              "Komunitas melaporkan insiden secara anonim",
-              "NGO memanfaatkan data SafePulse",
-            ]}
+            items={GEO_OUTCOMES}
           />
           <GeoCard
             icon="💡"
-            title="CLARITY"
+            title={t("seo_geo.clarity_label").toUpperCase()}
             color="border-amber-700/40 bg-amber-950/20"
             titleColor="text-amber-300"
-            items={[
-              "Satu halaman = satu dominant intent",
-              "URL: /insights/how-to-identify-online-scams",
-              "H1 menjawab keyword primer secara langsung",
-              "Answer Capsule di atas fold untuk AI extraction",
-              "FAQ schema mencakup long-tail questions",
-              "Konten diverifikasi oleh peneliti kesehatan publik",
-            ]}
+            items={GEO_CLARITY}
           />
         </div>
       </section>
@@ -339,37 +532,59 @@ export default function SeoGeo() {
       {/* ── ON-PAGE STRUCTURE ── */}
       <section className="bg-slate-900/40 py-16">
         <div className="max-w-5xl mx-auto px-6">
-          <SectionLabel>On-Page Structure</SectionLabel>
-          <h2 className="text-3xl font-bold mb-8">Struktur Halaman &amp; Internal Link Web</h2>
+          <SectionLabel>{t("seo_geo.onpage_title")}</SectionLabel>
+          <h2 className="text-3xl font-bold mb-8">
+            {t("seo_geo.onpage_subtitle")}
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="rounded-xl border border-slate-700 bg-slate-900 p-5">
-                <div className="text-xs font-mono text-slate-500 mb-2">TITLE TAG · 62 chars</div>
+                <div className="text-xs font-mono text-slate-500 mb-2">
+                  TITLE TAG · 62 chars
+                </div>
                 <div className="font-mono text-emerald-300 text-sm leading-relaxed">
                   How to Identify Online Scams in Southeast Asia | SafePulse
                 </div>
               </div>
               <div className="rounded-xl border border-slate-700 bg-slate-900 p-5">
-                <div className="text-xs font-mono text-slate-500 mb-2">H1 · Human-first</div>
+                <div className="text-xs font-mono text-slate-500 mb-2">
+                  H1 · Human-first
+                </div>
                 <div className="font-semibold text-white text-sm leading-relaxed">
-                  Scams, Fraud &amp; Online Threats: What Every Person in SEA Needs to Know
+                  Scams, Fraud &amp; Online Threats: What Every Person in SEA
+                  Needs to Know
                 </div>
               </div>
               <div className="rounded-xl border border-slate-700 bg-slate-900 p-5">
-                <div className="text-xs font-mono text-slate-500 mb-3">H2 / H3 OUTLINE</div>
+                <div className="text-xs font-mono text-slate-500 mb-3">
+                  H2 / H3 OUTLINE
+                </div>
                 <div className="space-y-2 text-sm">
                   {[
-                    { tag: "H2", text: "What Is an Online Scam? (Answer Capsule)" },
+                    {
+                      tag: "H2",
+                      text: "What Is an Online Scam? (Answer Capsule)",
+                    },
                     { tag: "H3", text: "Phishing & SMS Fraud", indent: true },
-                    { tag: "H3", text: "Investment & Crypto Scams", indent: true },
+                    {
+                      tag: "H3",
+                      text: "Investment & Crypto Scams",
+                      indent: true,
+                    },
                     { tag: "H3", text: "Romance Scam Patterns", indent: true },
-                    { tag: "H2", text: "Warning Signs — A Practical Checklist" },
+                    {
+                      tag: "H2",
+                      text: "Warning Signs — A Practical Checklist",
+                    },
                     { tag: "H2", text: "Immediate Steps If Targeted" },
                     { tag: "H2", text: "Regional Resources & Reporting" },
                     { tag: "H2", text: "FAQ — Common Questions Answered" },
                   ].map((item, i) => (
-                    <div key={i} className={`flex gap-2 items-center ${item.indent ? "ml-4" : ""}`}>
+                    <div
+                      key={i}
+                      className={`flex gap-2 items-center ${item.indent ? "ml-4" : ""}`}
+                    >
                       <span className="text-xs font-mono bg-slate-800 text-slate-400 px-1.5 py-0.5 rounded">
                         {item.tag}
                       </span>
@@ -381,15 +596,41 @@ export default function SeoGeo() {
             </div>
 
             <div className="rounded-xl border border-slate-700 bg-slate-900 p-5">
-              <div className="text-xs font-mono text-slate-500 mb-4">INTERNAL LINK WEB</div>
+              <div className="text-xs font-mono text-slate-500 mb-4">
+                INTERNAL LINK WEB
+              </div>
               <div className="space-y-3">
                 {[
-                  { path: "/check", label: "Scam Checker Tool", desc: "Live URL analysis" },
-                  { path: "/report", label: "Report an Incident", desc: "Anonymous submission" },
-                  { path: "/dashboard", label: "Threat Map", desc: "Real-time SEA dashboard" },
-                  { path: "/evidence", label: "Case Studies", desc: "Documented scam evidence" },
-                  { path: "/insights", label: "Threat Library", desc: "14 articles · 12 languages" },
-                  { path: "/products", label: "Youth Peace Hub", desc: "Prevention programs" },
+                  {
+                    path: "/check",
+                    label: "Scam Checker Tool",
+                    desc: "Live URL analysis",
+                  },
+                  {
+                    path: "/report",
+                    label: "Report an Incident",
+                    desc: "Anonymous submission",
+                  },
+                  {
+                    path: "/dashboard",
+                    label: "Threat Map",
+                    desc: "Real-time SEA dashboard",
+                  },
+                  {
+                    path: "/evidence",
+                    label: "Case Studies",
+                    desc: "Documented scam evidence",
+                  },
+                  {
+                    path: "/insights",
+                    label: "Threat Library",
+                    desc: "14 articles · 12 languages",
+                  },
+                  {
+                    path: "/products",
+                    label: "Youth Peace Hub",
+                    desc: "Prevention programs",
+                  },
                 ].map((link, i) => (
                   <div
                     key={i}
@@ -399,7 +640,9 @@ export default function SeoGeo() {
                       {link.path}
                     </code>
                     <div className="min-w-0">
-                      <div className="text-sm text-white font-medium truncate">{link.label}</div>
+                      <div className="text-sm text-white font-medium truncate">
+                        {link.label}
+                      </div>
                       <div className="text-xs text-slate-500">{link.desc}</div>
                     </div>
                   </div>
@@ -413,42 +656,17 @@ export default function SeoGeo() {
       {/* ── GENAI BEFORE / AFTER ── */}
       <section className="max-w-5xl mx-auto px-6 py-16">
         <SectionLabel>GenAI Workflow</SectionLabel>
-        <h2 className="text-3xl font-bold mb-3">Before / After — AI-Assisted Content Refinement</h2>
+        <h2 className="text-3xl font-bold mb-3">
+          {t("seo_geo.before")} / {t("seo_geo.after")} — AI-Assisted Content
+          Refinement
+        </h2>
         <p className="text-slate-400 mb-8 max-w-2xl">
-          AI digunakan untuk menghasilkan opsi awal. Keputusan akhir — tone, framing, akurasi —
-          selalu ada di tangan manusia.
+          AI generates the first options. Final decisions — tone, framing,
+          accuracy — always remain with the human.
         </p>
 
         <div className="space-y-5">
-          {[
-            {
-              element: "Title Tag",
-              before: "Online Scams Southeast Asia — SafePulse",
-              after: "How to Identify Online Scams in Southeast Asia | SafePulse",
-              note: "Ditambahkan action verb 'How to' + dipertahankan ≤65 chars",
-            },
-            {
-              element: "Meta Description",
-              before: "SafePulse helps you avoid online scams. Learn about phishing and more.",
-              after:
-                "Protect yourself and your family from phishing, investment fraud, and romance scams across SEA. Spot the 5 warning signs now — free, anonymous tool included.",
-              note: "150–160 chars, benefit-led, CTA disertakan",
-            },
-            {
-              element: "H1",
-              before: "How to Identify Online Scams Southeast Asia",
-              after: "Scams, Fraud & Online Threats: What Every Person in SEA Needs to Know",
-              note: "Bahasa natural, relevansi emosional, keyword primer tertanam organik",
-            },
-            {
-              element: "Blog Intro — Flesch-Kincaid Score 64",
-              before:
-                "Online scams are a prevalent issue in Southeast Asia, affecting millions annually across various digital channels.",
-              after:
-                "Every day, someone in Southeast Asia clicks a link that empties their savings. You don't have to be the next victim — this guide shows you exactly how to spot the trap before it springs.",
-              note: "FK Score 64 · Narrative-driven · Problem/solution framing dipilih vs. dua opsi lain",
-            },
-          ].map((item, i) => (
+          {BEFORE_AFTER.map((item, i) => (
             <div
               key={i}
               className="rounded-2xl border border-slate-800 bg-slate-900/50 overflow-hidden"
@@ -462,17 +680,27 @@ export default function SeoGeo() {
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="w-2 h-2 rounded-full bg-red-500" />
-                    <span className="text-xs text-red-400 font-mono">BEFORE</span>
+                    <span className="text-xs text-red-400 font-mono">
+                      {t("seo_geo.before").toUpperCase()}
+                    </span>
                   </div>
-                  <p className="text-sm text-slate-400 leading-relaxed">{item.before}</p>
+                  <p className="text-sm text-slate-400 leading-relaxed">
+                    {item.before}
+                  </p>
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                    <span className="text-xs text-emerald-400 font-mono">AFTER</span>
+                    <span className="text-xs text-emerald-400 font-mono">
+                      {t("seo_geo.after").toUpperCase()}
+                    </span>
                   </div>
-                  <p className="text-sm text-white leading-relaxed">{item.after}</p>
-                  <p className="text-xs text-slate-500 mt-2 italic">{item.note}</p>
+                  <p className="text-sm text-white leading-relaxed">
+                    {item.after}
+                  </p>
+                  <p className="text-xs text-slate-500 mt-2 italic">
+                    {item.note}
+                  </p>
                 </div>
               </div>
             </div>
@@ -483,8 +711,11 @@ export default function SeoGeo() {
       {/* ── ANSWER CAPSULE + SCHEMA ── */}
       <section className="bg-slate-900/40 py-16">
         <div className="max-w-5xl mx-auto px-6">
-          <SectionLabel>Schema &amp; Structured Data</SectionLabel>
-          <h2 className="text-3xl font-bold mb-8">Answer Capsule · JSON-LD · Trust Signals</h2>
+          <SectionLabel>{t("seo_geo.schema_title")}</SectionLabel>
+          <h2 className="text-3xl font-bold mb-8">
+            {t("seo_geo.answer_capsule_label")} · JSON-LD ·{" "}
+            {t("seo_geo.trust_signals_label")}
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-2xl border border-teal-800/50 bg-teal-950/20 p-6">
@@ -492,44 +723,78 @@ export default function SeoGeo() {
                 <span className="text-xl">🤖</span>
                 <div>
                   <div className="text-xs font-mono text-teal-500 uppercase tracking-widest">
-                    Answer Capsule
+                    {t("seo_geo.answer_capsule_label")}
                   </div>
-                  <div className="text-sm text-white font-semibold">53 kata · GEO-ready · AI-extractable</div>
+                  <div className="text-sm text-white font-semibold">
+                    53 words · GEO-ready · AI-extractable
+                  </div>
                 </div>
               </div>
               <div className="bg-slate-900 rounded-xl p-4 border border-slate-800">
                 <p className="text-sm text-slate-300 leading-relaxed italic">
-                  "Online scams in Southeast Asia follow five key patterns: phishing via SMS or WhatsApp,
-                  investment fraud promising guaranteed returns, romance scams requesting money transfers,
-                  money mule recruitment through job ads, and radicalisation through extremist content.
-                  Recognising these patterns — and reporting them — is the first step to staying safe."
+                  "Online scams in Southeast Asia follow five key patterns:
+                  phishing via SMS or WhatsApp, investment fraud promising
+                  guaranteed returns, romance scams requesting money transfers,
+                  money mule recruitment through job ads, and radicalisation
+                  through extremist content. Recognising these patterns — and
+                  reporting them — is the first step to staying safe."
                 </p>
               </div>
               <p className="text-xs text-slate-500 mt-3">
-                Ditempatkan di atas fold — dirancang agar dikutip oleh Google AI Overview,
-                Perplexity, dan ChatGPT Search.
+                Placed above fold — designed to be cited by Google AI Overview,
+                Perplexity, and ChatGPT Search.
               </p>
             </div>
 
             <div className="rounded-2xl border border-slate-700 bg-slate-900/50 p-6">
               <div className="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">
-                Trust &amp; Identity Signals
+                {t("seo_geo.trust_signals_label")}
               </div>
               <div className="space-y-3">
                 {[
-                  { icon: "✅", label: "Author", value: "SafePulse Team (named person entity)" },
-                  { icon: "🏢", label: "Publisher", value: "Organization schema dengan logo URL" },
-                  { icon: "📅", label: "Dates", value: "datePublished + dateModified" },
-                  { icon: "🌐", label: "URL", value: "Canonical URL sesuai halaman" },
-                  { icon: "🔤", label: "Language", value: "inLanguage: 'en' (per artikel)" },
-                  { icon: "📋", label: "About", value: "Named topic entity untuk GEO clarity" },
-                  { icon: "❓", label: "FAQPage", value: "5 Q&A tersarang dalam @graph" },
-                  { icon: "🔍", label: "Validated", value: "Google Rich Results Test: Pass ✅" },
+                  {
+                    icon: "✅",
+                    label: "Author",
+                    value: "SafePulse Team (named person entity)",
+                  },
+                  {
+                    icon: "🏢",
+                    label: "Publisher",
+                    value: "Organization schema with logo URL",
+                  },
+                  {
+                    icon: "📅",
+                    label: "Dates",
+                    value: "datePublished + dateModified",
+                  },
+                  { icon: "🌐", label: "URL", value: "Canonical URL per page" },
+                  {
+                    icon: "🔤",
+                    label: "Language",
+                    value: "inLanguage: 'en' (per article)",
+                  },
+                  {
+                    icon: "📋",
+                    label: "About",
+                    value: "Named topic entity for GEO clarity",
+                  },
+                  {
+                    icon: "❓",
+                    label: "FAQPage",
+                    value: "5 Q&A nested in @graph",
+                  },
+                  {
+                    icon: "🔍",
+                    label: t("seo_geo.validated"),
+                    value: "Google Rich Results Test: Pass ✅",
+                  },
                 ].map((sig, i) => (
                   <div key={i} className="flex gap-3 items-start text-sm">
                     <span className="text-lg leading-none">{sig.icon}</span>
                     <div>
-                      <span className="text-slate-500 font-mono text-xs">{sig.label}:</span>{" "}
+                      <span className="text-slate-500 font-mono text-xs">
+                        {sig.label}:
+                      </span>{" "}
                       <span className="text-slate-300">{sig.value}</span>
                     </div>
                   </div>
@@ -543,7 +808,7 @@ export default function SeoGeo() {
                 <span className="w-3 h-3 rounded-full bg-amber-500/80" />
                 <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
                 <span className="text-xs font-mono text-slate-400 ml-2">
-                  JSON-LD Schema — Article + FAQPage (diterapkan di halaman artikel)
+                  JSON-LD Schema — Article + FAQPage (applied on article pages)
                 </span>
               </div>
               <pre className="p-5 text-xs text-emerald-300 font-mono overflow-x-auto leading-relaxed whitespace-pre">{`<script type="application/ld+json">
@@ -586,77 +851,51 @@ export default function SeoGeo() {
 
       {/* ── ETHICAL AI ── */}
       <section className="max-w-5xl mx-auto px-6 py-16">
-        <SectionLabel>Penggunaan AI yang Bertanggung Jawab</SectionLabel>
-        <h2 className="text-3xl font-bold mb-8">AI Digunakan — Keputusan Tetap di Tangan Manusia</h2>
+        <SectionLabel>{t("seo_geo.responsible_ai_title")}</SectionLabel>
+        <h2 className="text-3xl font-bold mb-8">
+          {t("seo_geo.responsible_ai_subtitle")}
+        </h2>
 
         <div className="grid sm:grid-cols-3 gap-6">
           <EthicCard
             icon="✅"
-            title="AI Mengerjakan"
+            title={t("seo_geo.ai_does")}
             color="border-blue-700/40"
             titleColor="text-blue-300"
-            items={[
-              "Menghasilkan 3 opsi judul per elemen",
-              "Membuat draft blog awal (~900 kata)",
-              "Menyarankan 5 edit pengetatan untuk direview",
-              "Mengusulkan struktur JSON-LD schema",
-              "Menghasilkan terjemahan 12 bahasa",
-              "Membuat ide FAQ dari keyword research",
-            ]}
+            items={AI_DOES}
           />
           <EthicCard
             icon="🧑"
-            title="Manusia Memutuskan"
+            title={t("seo_geo.human_decides")}
             color="border-emerald-700/40"
             titleColor="text-emerald-300"
-            items={[
-              "Memilih judul terbaik dari 3 opsi AI",
-              "Mengedit intro — memilih gaya problem/solution",
-              "Memverifikasi klaim faktual ke sumber resmi",
-              "Menghapus frasa tidak sensitif budaya di AR/JV",
-              "Validasi manual JSON-LD di Google Rich Results",
-              "Menetapkan keyword density — tidak dipaksakan",
-            ]}
+            items={HUMAN_DECIDES}
           />
           <EthicCard
             icon="🚫"
-            title="AI Tidak Boleh"
+            title={t("seo_geo.ai_never")}
             color="border-red-800/40"
             titleColor="text-red-300"
-            items={[
-              "Publish tanpa review manusia",
-              "Membuat statistik atau sitasi palsu",
-              "Menyalin konten kompetitor",
-              "Mengabaikan brand voice SafePulse",
-              "Memilih prioritas bahasa secara sepihak",
-              "Menentukan framework GEO entity",
-            ]}
+            items={AI_NEVER}
           />
         </div>
 
         <div className="mt-6 text-center text-sm text-slate-500 italic">
-          Prinsip: AI mempercepat ideasi dan drafting — manusia memegang strategi,
-          kualitas editorial, akurasi, dan sensitivitas budaya.
+          Principle: AI accelerates ideation and drafting — humans hold
+          strategy, editorial quality, accuracy, and cultural sensitivity.
         </div>
       </section>
 
       {/* ── SKILLS ── */}
       <section className="bg-slate-900/40 py-16">
         <div className="max-w-5xl mx-auto px-6">
-          <SectionLabel>Skills yang Diterapkan</SectionLabel>
-          <h2 className="text-3xl font-bold mb-8">Kemampuan Teknis &amp; Strategis</h2>
+          <SectionLabel>{t("seo_geo.skills_title")}</SectionLabel>
+          <h2 className="text-3xl font-bold mb-8">
+            {t("seo_geo.skills_subtitle")}
+          </h2>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-10">
-            {[
-              "Keyword cluster strategy dengan intent classification",
-              "GEO entity + outcome framework pada produk nyata",
-              "AI-assisted on-page refinement dengan kontrol editorial penuh",
-              "Kalibrasi readability FK 60–70 di 12 bahasa",
-              "JSON-LD schema (Article + FAQPage) dengan trust signals",
-              "Full-stack deployment: Codespaces → EC2 → Amplify + HTTPS",
-              "Data insiden anonim → public health dashboard",
-              "WCAG 2.1 AA accessibility + dukungan RTL (Arabic)",
-            ].map((skill, i) => (
+            {SKILLS.map((skill, i) => (
               <div
                 key={i}
                 className="flex gap-3 items-start p-4 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-emerald-800/50 transition-colors"
@@ -668,16 +907,31 @@ export default function SeoGeo() {
           </div>
 
           <div className="rounded-2xl border border-slate-700 bg-slate-900/50 p-6">
-            <div className="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">Tech Stack</div>
+            <div className="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">
+              Tech Stack
+            </div>
             <div className="flex flex-wrap gap-2">
               {[
-                "Laravel 10", "PHP 8.2", "React 18", "TypeScript",
-                "TailwindCSS", "WCAG 2.1 AA", "SQLite / MySQL",
-                "GitHub Codespaces", "AWS EC2", "AWS Amplify", "DuckDNS HTTPS",
-                "react-i18next", "JSON-LD Schema", "Google Rich Results",
-              ].map((t) => (
-                <span key={t} className="text-xs bg-slate-800 text-slate-400 px-3 py-1.5 rounded-full border border-slate-700">
-                  {t}
+                "Laravel 10",
+                "PHP 8.2",
+                "React 18",
+                "TypeScript",
+                "TailwindCSS",
+                "WCAG 2.1 AA",
+                "SQLite / MySQL",
+                "GitHub Codespaces",
+                "AWS EC2",
+                "AWS Amplify",
+                "DuckDNS HTTPS",
+                "react-i18next",
+                "JSON-LD Schema",
+                "Google Rich Results",
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="text-xs bg-slate-800 text-slate-400 px-3 py-1.5 rounded-full border border-slate-700"
+                >
+                  {tech}
                 </span>
               ))}
             </div>
@@ -685,10 +939,12 @@ export default function SeoGeo() {
         </div>
       </section>
 
-      {/* ── LINKS ── */}
+      {/* ── LIVE LINKS ── */}
       <section className="max-w-5xl mx-auto px-6 py-16">
-        <SectionLabel>Lihat Langsung</SectionLabel>
-        <h2 className="text-3xl font-bold mb-8">Platform &amp; Source Code</h2>
+        <SectionLabel>{t("seo_geo.live_title")}</SectionLabel>
+        <h2 className="text-3xl font-bold mb-8">
+          {t("seo_geo.live_subtitle")}
+        </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
@@ -701,7 +957,7 @@ export default function SeoGeo() {
             },
             {
               icon: "📰",
-              label: "Artikel SEO",
+              label: "SEO Article",
               desc: "How to Identify Online Scams",
               url: "/insights/how-to-identify-online-scams",
               external: false,
@@ -757,7 +1013,8 @@ export default function SeoGeo() {
       {/* ── FOOTER ── */}
       <section className="border-t border-slate-800 py-10 text-center">
         <p className="text-slate-600 text-xs font-mono">
-          SafePulse · Anti-Scam &amp; Digital Resilience Platform · Southeast Asia
+          SafePulse · Anti-Scam &amp; Digital Resilience Platform · Southeast
+          Asia
         </p>
       </section>
     </div>
