@@ -8,7 +8,8 @@
     "global": "语言",
     "checker": "诈骗检测",
     "report": "举报事件",
-    "dashboard": "数据看板"
+    "dashboard": "数据看板",
+    "seo_geo": "搜索优化策略"
   },
   "home": {
     "hero_badge": "反诈骗 · 数字韧性 · 青少年安全",

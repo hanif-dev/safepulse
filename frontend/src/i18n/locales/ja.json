@@ -8,7 +8,8 @@
     "global": "言語",
     "checker": "詐欺チェッカー",
     "report": "インシデント報告",
-    "dashboard": "ダッシュボード"
+    "dashboard": "ダッシュボード",
+    "seo_geo": "SEO戦略"
   },
   "home": {
     "hero_badge": "詐欺対策 · デジタルレジリエンス · 青少年の安全",

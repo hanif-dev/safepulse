@@ -8,7 +8,8 @@
     "global": "Idioma",
     "checker": "Detector de estafas",
     "report": "Reportar incidente",
-    "dashboard": "Panel de control"
+    "dashboard": "Panel de control",
+    "seo_geo": "SEO & GEO"
   },
   "home": {
     "hero_badge": "Anti-Estafas · Resiliencia Digital · Seguridad Juvenil",
