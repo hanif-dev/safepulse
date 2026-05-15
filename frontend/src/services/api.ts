@@ -1,17 +1,14 @@
 import axios from 'axios';
 
-// VITE_API_BASE_URL is set in .env
-// In Codespaces dev: "/api" (proxied by Vite to localhost:8000)
-// In production:     "https://api.yourdomain.com/api"
 const BASE_URL = import.meta.env.VITE_API_BASE_URL ?? '/api';
 
 const client = axios.create({
   baseURL: BASE_URL,
   headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-  timeout: 15_000,
+  timeout: 20_000, // Mistral AI call can take up to ~8s
 });
 
-// ── Types ─────────────────────────────────────────────────────────────────────
+// ── Types ─────────────────────────────────────────────────────────────────
 
 export interface ScamCheckPayload {
   message_text?: string;
@@ -24,6 +21,10 @@ export interface ScamCheckResult {
   score: number;
   level: 'Low' | 'Medium' | 'High';
   reasons: string[];
+  // Mistral AI metadata (added in Layer-2 integration)
+  analysis_by?: string[];
+  powered_by?: string;
+  privacy_note?: string;
 }
 
 export interface IncidentPayload {
@@ -60,11 +61,11 @@ export interface StatsOverview {
     people_protected: number;
   };
   by_category: Record<string, number>;
-  by_country: Record<string, number>;
-  monthly: Record<string, number>;
+  by_country:  Record<string, number>;
+  monthly:     Record<string, number>;
 }
 
-// ── API calls ─────────────────────────────────────────────────────────────────
+// ── API calls ─────────────────────────────────────────────────────────────
 
 export const checkScam = (payload: ScamCheckPayload): Promise<ScamCheckResult> =>
   client.post('/check-scam', payload).then((r) => r.data);

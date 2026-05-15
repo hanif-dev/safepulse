@@ -16,6 +16,7 @@ import ScamChecker from "./pages/ScamChecker";
 import IncidentReport from "./pages/IncidentReport";
 import SeoGeo from "./pages/SeoGeo";
 import HowToIdentifyScams from "./pages/HowToIdentifyScams";
+import Privacy from "./pages/Privacy";
 
 export default function App() {
   const { theme, toggle: toggleTheme } = useTheme();
@@ -42,6 +43,7 @@ export default function App() {
             path="/insights/how-to-identify-online-scams"
             element={<HowToIdentifyScams />}
           />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </main>
 

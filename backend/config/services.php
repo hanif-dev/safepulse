@@ -30,5 +30,18 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Mistral AI (🇫🇷 Paris) — SafePulse Layer-2 Scam Detection
+    |--------------------------------------------------------------------------
+    | Model: mistral-small-latest
+    | Docs:  https://docs.mistral.ai/
+    | Key:   https://console.mistral.ai/
+    */
+    'mistral' => [
+        'key'   => env('MISTRAL_API_KEY'),
+        'model' => env('MISTRAL_MODEL', 'mistral-small-latest'),
+    ],
 
 ];
