@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "products": "Produkto",
+    "impact": "Epekto",
+    "evidence": "Ebidensya",
+    "insights": "Artikulo",
+    "dashboard": "Dashboard",
+    "contact": "Kontak",
+    "checker": "Checker",
+    "report": "Iulat"
+  },
+  "common": {
+    "error": "May naganap na error. Pakisubukang muli.",
+    "loading": "Naglo-load..."
+  },
+  "home": {
+    "hero_badge": "Digital Safety Platform",
+    "hero_title": "Protektahan ang Komunidad Mula sa Digital na Banta",
+    "hero_subtitle": "Tukuyin, iulat, at matuto tungkol sa mga online na scam. Libre at hindi nagpapakilala.",
+    "cta_check": "Suriin ang Scam",
+    "cta_report": "Iulat ang Insidente",
+    "features_title": "Pangunahing Tampok",
+    "features_subtitle": "Mga libreng tool para sa komunidad",
+    "cta_banner_title": "Tingnan ang mga banta sa inyong rehiyon",
+    "cta_banner_subtitle": "Tuklasin ang aming live na public health dashboard",
+    "cta_banner_button": "Buksan ang Dashboard"
+  },
+  "checker": {
+    "title": "Scam Checker",
+    "subtitle": "Suriin ang kahina-hinalang mensahe at link",
+    "label_message": "Mensahe",
+    "placeholder_message": "I-paste ang kahina-hinalang mensahe dito...",
+    "label_url": "URL",
+    "placeholder_url": "https://...",
+    "label_phone": "Numero ng Telepono",
+    "placeholder_phone": "+63...",
+    "label_account": "Account Number/Wallet",
+    "placeholder_account": "Account Number",
+    "submit": "Suriin Ngayon",
+    "loading": "Sinusuri...",
+    "result_title": "Resulta ng Pagsusuri",
+    "reasons_title": "Mga Natuklasan"
+  },
+  "incident": {
+    "title": "Iulat ang Insidente",
+    "subtitle": "Ibahagi nang hindi nagpapakilala",
+    "label_category": "Kategorya",
+    "label_country": "Bansa",
+    "label_age_group": "Pangkat ng Edad",
+    "label_description": "Paglalarawan",
+    "label_impact": "Antas ng Epekto",
+    "label_loss": "Pagkawala ng Pera",
+    "submit": "Ipasa ang Ulat",
+    "success": "Naipasa na ang iyong ulat. Salamat.",
+    "categories": {
+      "phishing": "Phishing",
+      "investment": "Scam sa Pamumuhunan",
+      "romance": "Romance Scam",
+      "radicalization": "Radikalisasyon",
+      "money_laundering": "Money Laundering",
+      "other": "Iba pa"
+    },
+    "impact_levels": {
+      "low": "Mababa",
+      "medium": "Katamtaman",
+      "high": "Mataas"
+    }
+  },
+  "footer": {
+    "tagline": "Pagbuo ng digital resilience para sa Timog-Silangang Asya",
+    "links_title": "Mga Link",
+    "copyright": "© 2026 SafePulse"
+  },
+  "evidence": {
+    "title": "Ebidensya",
+    "subtitle": "Mga case study at institusyonal na sanggunian"
+  }
+}

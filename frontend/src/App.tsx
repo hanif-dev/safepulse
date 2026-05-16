@@ -1,3 +1,4 @@
+import Admin from "./pages/Admin";
 import { Routes, Route } from "react-router-dom";
 import { useTheme } from "./hooks/useTheme";
 import { useFontSize } from "./hooks/useFontSize";
@@ -44,6 +45,7 @@ export default function App() {
             element={<HowToIdentifyScams />}
           />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </main>
 

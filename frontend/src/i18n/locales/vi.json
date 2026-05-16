@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "products": "Sản phẩm",
+    "impact": "Tác động",
+    "evidence": "Bằng chứng",
+    "insights": "Bài viết",
+    "dashboard": "Bảng điều khiển",
+    "contact": "Liên hệ",
+    "checker": "Kiểm tra",
+    "report": "Báo cáo"
+  },
+  "common": {
+    "error": "Đã xảy ra lỗi. Vui lòng thử lại.",
+    "loading": "Đang tải..."
+  },
+  "home": {
+    "hero_badge": "Nền tảng An toàn Kỹ thuật số",
+    "hero_title": "Bảo vệ cộng đồng của bạn khỏi các mối đe dọa kỹ thuật số",
+    "hero_subtitle": "Phát hiện, báo cáo và tìm hiểu về lừa đảo trực tuyến. Miễn phí và ẩn danh.",
+    "cta_check": "Kiểm tra lừa đảo",
+    "cta_report": "Báo cáo sự cố",
+    "features_title": "Tính năng chính",
+    "features_subtitle": "Công cụ miễn phí cho cộng đồng",
+    "cta_banner_title": "Xem các mối đe dọa trong khu vực",
+    "cta_banner_subtitle": "Khám phá bảng điều khiển y tế công cộng theo thời gian thực",
+    "cta_banner_button": "Mở Bảng điều khiển"
+  },
+  "checker": {
+    "title": "Kiểm tra Lừa đảo",
+    "subtitle": "Phân tích tin nhắn và liên kết đáng ngờ",
+    "label_message": "Tin nhắn",
+    "placeholder_message": "Dán tin nhắn đáng ngờ vào đây...",
+    "label_url": "Liên kết",
+    "placeholder_url": "https://...",
+    "label_phone": "Số điện thoại",
+    "placeholder_phone": "+84...",
+    "label_account": "Số tài khoản/Ví",
+    "placeholder_account": "Số tài khoản",
+    "submit": "Phân tích ngay",
+    "loading": "Đang phân tích...",
+    "result_title": "Kết quả phân tích",
+    "reasons_title": "Phát hiện"
+  },
+  "incident": {
+    "title": "Báo cáo Sự cố",
+    "subtitle": "Chia sẻ ẩn danh",
+    "label_category": "Loại",
+    "label_country": "Quốc gia",
+    "label_age_group": "Nhóm tuổi",
+    "label_description": "Mô tả",
+    "label_impact": "Mức độ tác động",
+    "label_loss": "Thiệt hại tài chính",
+    "submit": "Gửi báo cáo",
+    "success": "Báo cáo của bạn đã được gửi. Cảm ơn.",
+    "categories": {
+      "phishing": "Lừa đảo qua tin nhắn",
+      "investment": "Lừa đảo đầu tư",
+      "romance": "Lừa đảo tình cảm",
+      "radicalization": "Cực đoan hóa",
+      "money_laundering": "Rửa tiền",
+      "other": "Khác"
+    },
+    "impact_levels": {
+      "low": "Thấp",
+      "medium": "Trung bình",
+      "high": "Cao"
+    }
+  },
+  "footer": {
+    "tagline": "Xây dựng khả năng phục hồi kỹ thuật số cho Đông Nam Á",
+    "links_title": "Liên kết",
+    "copyright": "© 2026 SafePulse"
+  },
+  "evidence": {
+    "title": "Bằng chứng",
+    "subtitle": "Nghiên cứu điển hình và tham chiếu thể chế"
+  }
+}

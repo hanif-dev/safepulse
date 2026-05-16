@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "products": "ผลิตภัณฑ์",
+    "impact": "ผลกระทบ",
+    "evidence": "หลักฐาน",
+    "insights": "บทความ",
+    "dashboard": "แดชบอร์ด",
+    "contact": "ติดต่อ",
+    "checker": "ตรวจสอบ",
+    "report": "รายงาน"
+  },
+  "common": {
+    "error": "เกิดข้อผิดพลาด กรุณาลองอีกครั้ง",
+    "loading": "กำลังโหลด..."
+  },
+  "home": {
+    "hero_badge": "แพลตฟอร์มความปลอดภัยดิจิทัล",
+    "hero_title": "ปกป้องชุมชนของคุณจากภัยคุกคามทางดิจิทัล",
+    "hero_subtitle": "ตรวจจับ รายงาน และเรียนรู้เกี่ยวกับการหลอกลวงออนไลน์ ฟรีและไม่ระบุตัวตน",
+    "cta_check": "ตรวจสอบการหลอกลวง",
+    "cta_report": "รายงานเหตุการณ์",
+    "features_title": "ฟีเจอร์หลัก",
+    "features_subtitle": "เครื่องมือฟรีสำหรับชุมชน",
+    "cta_banner_title": "ดูภัยคุกคามในภูมิภาคของคุณ",
+    "cta_banner_subtitle": "สำรวจแดชบอร์ดสาธารณสุขแบบเรียลไทม์",
+    "cta_banner_button": "เปิดแดชบอร์ด"
+  },
+  "checker": {
+    "title": "ตรวจสอบการหลอกลวง",
+    "subtitle": "วิเคราะห์ข้อความและลิงก์ที่น่าสงสัย",
+    "label_message": "ข้อความ",
+    "placeholder_message": "วางข้อความที่น่าสงสัยที่นี่...",
+    "label_url": "ลิงก์",
+    "placeholder_url": "https://...",
+    "label_phone": "หมายเลขโทรศัพท์",
+    "placeholder_phone": "+66...",
+    "label_account": "หมายเลขบัญชี/วอลเล็ต",
+    "placeholder_account": "หมายเลขบัญชี",
+    "submit": "วิเคราะห์ทันที",
+    "loading": "กำลังวิเคราะห์...",
+    "result_title": "ผลการวิเคราะห์",
+    "reasons_title": "ข้อค้นพบ"
+  },
+  "incident": {
+    "title": "รายงานเหตุการณ์",
+    "subtitle": "แชร์โดยไม่ระบุตัวตน",
+    "label_category": "ประเภท",
+    "label_country": "ประเทศ",
+    "label_age_group": "กลุ่มอายุ",
+    "label_description": "คำอธิบาย",
+    "label_impact": "ระดับผลกระทบ",
+    "label_loss": "การสูญเสียทางการเงิน",
+    "submit": "ส่งรายงาน",
+    "success": "รายงานของคุณถูกส่งแล้ว ขอบคุณ",
+    "categories": {
+      "phishing": "ฟิชชิ่ง",
+      "investment": "การหลอกลวงเกี่ยวกับการลงทุน",
+      "romance": "การหลอกลวงรัก",
+      "radicalization": "การปลุกระดม",
+      "money_laundering": "การฟอกเงิน",
+      "other": "อื่นๆ"
+    },
+    "impact_levels": {
+      "low": "ต่ำ",
+      "medium": "ปานกลาง",
+      "high": "สูง"
+    }
+  },
+  "footer": {
+    "tagline": "สร้างความยืดหยุ่นทางดิจิทัลให้กับเอเชียตะวันออกเฉียงใต้",
+    "links_title": "ลิงก์",
+    "copyright": "© 2026 SafePulse"
+  },
+  "evidence": {
+    "title": "หลักฐาน",
+    "subtitle": "กรณีศึกษาและการอ้างอิงสถาบัน"
+  }
+}

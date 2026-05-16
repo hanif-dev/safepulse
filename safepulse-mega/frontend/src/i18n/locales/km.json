@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "products": "ផលិតផល",
+    "impact": "ផលប៉ះពាល់",
+    "evidence": "ភ័ស្តុតាង",
+    "insights": "អត្ថបទ",
+    "dashboard": "ផ្ទាំងគ្រប់គ្រង",
+    "contact": "ទំនាក់ទំនង",
+    "checker": "ពិនិត្យ",
+    "report": "រាយការណ៍"
+  },
+  "common": {
+    "error": "មានបញ្ហា សូមព្យាយាមម្ដងទៀត",
+    "loading": "កំពុងផ្ទុក..."
+  },
+  "home": {
+    "hero_badge": "វេទិកាសុវត្ថិភាពឌីជីថល",
+    "hero_title": "ការពារសហគមន៍ពីការគំរាមកំហែងឌីជីថល",
+    "hero_subtitle": "រកឃើញ រាយការណ៍ និងស្វែងយល់អំពីការបោកប្រាស់អនឡាញ ដោយឥតគិតថ្លៃ និងអនាមិក",
+    "cta_check": "ពិនិត្យការបោកប្រាស់",
+    "cta_report": "រាយការណ៍ឧប្បត្តិហេតុ",
+    "features_title": "មុខងារសំខាន់",
+    "features_subtitle": "ឧបករណ៍ឥតគិតថ្លៃសម្រាប់សហគមន៍",
+    "cta_banner_title": "មើលការគំរាមកំហែងក្នុងតំបន់",
+    "cta_banner_subtitle": "ស្វែងយល់ផ្ទាំងគ្រប់គ្រងសុខភាពសាធារណៈ",
+    "cta_banner_button": "បើកផ្ទាំងគ្រប់គ្រង"
+  },
+  "checker": {
+    "title": "ពិនិត្យការបោកប្រាស់",
+    "subtitle": "វិភាគសារ និងតំណភ្ជាប់គួរឱ្យសង្ស័យ",
+    "label_message": "សារ",
+    "placeholder_message": "បិទភ្ជាប់សារគួរឱ្យសង្ស័យនៅទីនេះ...",
+    "label_url": "URL",
+    "placeholder_url": "https://...",
+    "label_phone": "លេខទូរស័ព្ទ",
+    "placeholder_phone": "+855...",
+    "label_account": "លេខគណនី/Wallet",
+    "placeholder_account": "លេខគណនី",
+    "submit": "វិភាគឥឡូវ",
+    "loading": "កំពុងវិភាគ...",
+    "result_title": "លទ្ធផលវិភាគ",
+    "reasons_title": "ការរកឃើញ"
+  },
+  "incident": {
+    "title": "រាយការណ៍ឧប្បត្តិហេតុ",
+    "subtitle": "ចែករំលែកដោយអនាមិក",
+    "label_category": "ប្រភេទ",
+    "label_country": "ប្រទេស",
+    "label_age_group": "ក្រុមអាយុ",
+    "label_description": "ការពិពណ៌នា",
+    "label_impact": "កម្រិតផលប៉ះពាល់",
+    "label_loss": "ការខាតបង់ហិរញ្ញវត្ថុ",
+    "submit": "ដាក់ស្នើរបាយការណ៍",
+    "success": "របាយការណ៍របស់អ្នកត្រូវបានដាក់ស្នើ។ សូមអរគុណ",
+    "categories": {
+      "phishing": "Phishing",
+      "investment": "ការបោកប្រាស់វិនិយោគ",
+      "romance": "ការបោកប្រាស់ស្នេហា",
+      "radicalization": "ការធ្វើជ្រុលនិយម",
+      "money_laundering": "ការលាងសម្អាតប្រាក់",
+      "other": "ផ្សេងៗ"
+    },
+    "impact_levels": {
+      "low": "ទាប",
+      "medium": "មធ្យម",
+      "high": "ខ្ពស់"
+    }
+  },
+  "footer": {
+    "tagline": "កសាងភាពធន់នឹងឌីជីថលសម្រាប់អាស៊ីអាគ្នេយ៍",
+    "links_title": "តំណភ្ជាប់",
+    "copyright": "© 2026 SafePulse"
+  },
+  "evidence": {
+    "title": "ភស្តុតាង",
+    "subtitle": "ករណីសិក្សា និងសេចក្តីយោងស្ថាប័ន"
+  }
+}
