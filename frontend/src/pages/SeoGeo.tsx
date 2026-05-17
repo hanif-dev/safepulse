@@ -172,7 +172,7 @@ function EthicCard({
 
 export default function SeoGeo() {
   const { t } = useTranslation();
-  const [articleCount, setArticleCount] = useState(42);
+  const [articleCount, setArticleCount] = useState(0);
 
   useEffect(() => {
     fetchArticles({}).then(res => {

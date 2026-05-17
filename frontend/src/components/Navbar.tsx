@@ -279,12 +279,12 @@ export default function Navbar({ theme, toggleTheme, fontSize }: NavbarProps) {
                   {[
                     {
                       group: "Latin script",
-                      codes: ["en", "id", "fr", "de", "es"],
+                      codes: ["en", "id", "fr", "de", "es", "vi", "tl"],
                     },
                     { group: "Arabic script", codes: ["ar"] },
                     {
                       group: "Asian scripts",
-                      codes: ["zh", "zh-TW", "ko", "ja"],
+                      codes: ["zh", "zh-TW", "ko", "ja", "th", "km"],
                     },
                     { group: "Cyrillic", codes: ["ru"] },
                     { group: "Aksara Jawa", codes: ["jv"] },
