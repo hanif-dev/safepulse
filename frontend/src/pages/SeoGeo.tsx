@@ -4,6 +4,7 @@
 import { SUPPORTED_LANGUAGES } from '../i18n';
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { fetchArticles } from '../services/api';
 
 /* ─── animated counter ─── */
 function useCounter(target: number, duration = 1800) {
@@ -171,6 +172,13 @@ function EthicCard({
 
 export default function SeoGeo() {
   const { t } = useTranslation();
+  const [articleCount, setArticleCount] = useState(42);
+
+  useEffect(() => {
+    fetchArticles({}).then(res => {
+      if (res?.meta?.total) setArticleCount(res.meta.total);
+    }).catch(() => {});
+  }, []);
 
   // ── Static data — technical content intentionally stays in English ────────
 
@@ -269,6 +277,7 @@ export default function SeoGeo() {
         "Every day, someone in Southeast Asia clicks a link that empties their savings. You don't have to be the next victim — this guide shows you exactly how to spot the trap before it springs.",
       note: "FK Score 64 · Narrative-driven · Problem/solution framing chosen over two other options",
     },
+       
   ];
 
   // ──────────────────────────────────────────────────────────────────────────
@@ -314,7 +323,7 @@ export default function SeoGeo() {
               suffix="+"
               label={t("seo_geo.stat_protected")}
             />
-            <AnimStat value={14} suffix="" label={t("seo_geo.stat_articles")} />
+            <AnimStat value={articleCount} suffix="" label={t("seo_geo.stat_articles")} />
             <AnimStat
               value={SUPPORTED_LANGUAGES.length}
               suffix=""

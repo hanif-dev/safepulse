@@ -37,5 +37,6 @@
   .markdown-body blockquote { @apply border-l-4 border-primary-400 pl-4 italic text-gray-600 dark:text-gray-400 my-4; }
   .markdown-body hr { @apply border-gray-200 dark:border-gray-700 my-6; }
   .markdown-body code { @apply bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono; }
-  .markdown-body pre  { @apply bg-gray-900 text-gray-100 rounded-lg p-4 overflow-x-auto mb-4; }
+  .markdown-body pre  { @apply bg-gray-900
+ text-gray-100 rounded-lg p-4 overflow-x-auto mb-4; }
 }
