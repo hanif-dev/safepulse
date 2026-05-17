@@ -32,7 +32,7 @@ const STUDIES = [
     flag: '🇫🇷',
     title: 'Mistral AI Integration — Multilingual Context-Aware Scam Detection',
     org: 'SafePulse × Mistral AI (Paris, France · Founded 2023)',
-    summary: 'SafePulse integrates Mistral AI\'s mistral-small-latest model as a second detection layer on top of its rule-based engine. Mistral understands deceptive context — "this is 100% safe, trust me" — and analyses scam patterns across 12 languages simultaneously, including Indonesian, French, Arabic, and Javanese. Rule-based engines miss this context; Mistral catches it.',
+    summary: 'SafePulse integrates Mistral AI\'s mistral-small-latest model as a second detection layer on top of its rule-based engine. Mistral understands deceptive context — "this is 100% safe, trust me" — and analyses scam patterns across 16 languages simultaneously, including Indonesian, French, Thai, Vietnamese, and 12 others. Rule-based engines miss this context; Mistral catches it.',
     outcomes: ['Context-aware deception detection', '12-language NLP including French', 'Graceful fallback if API unavailable'],
     category: 'French AI',
     color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800',

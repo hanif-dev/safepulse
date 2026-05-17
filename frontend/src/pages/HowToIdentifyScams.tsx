@@ -1,3 +1,4 @@
+import { SUPPORTED_LANGUAGES } from '../i18n';
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -201,7 +202,7 @@ export default function HowToIdentifyScams() {
             <span>·</span>
             <span>8 min read</span>
             <span>·</span>
-            <span className="text-emerald-400">12 languages available</span>
+            <span className="text-emerald-400">{SUPPORTED_LANGUAGES.length} languages available</span>
           </div>
 
           <div className="rounded-2xl border border-teal-700/50 bg-teal-950/30 p-6 mb-6">
