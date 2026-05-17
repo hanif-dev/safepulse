@@ -1,7 +1,7 @@
 // frontend/src/pages/SeoGeo.tsx
 // SEO · GEO · GenAI — SafePulse Portfolio Page
 // Route: /seo-geo
-
+import { SUPPORTED_LANGUAGES } from '../i18n';
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -206,7 +206,7 @@ export default function SeoGeo() {
     "Produces initial blog draft (~900 words)",
     "Suggests 5 tightening edits for review",
     "Proposes JSON-LD schema structure",
-    "Generates translations for 12 languages",
+    "Generates translations for 16 languages",
     "Creates FAQ ideas from keyword research",
   ];
 
@@ -232,7 +232,7 @@ export default function SeoGeo() {
     "Keyword cluster strategy with intent classification",
     "GEO entity + outcome framework on a real product",
     "AI-assisted on-page refinement with full editorial control",
-    "Readability calibration FK 60–70 across 12 languages",
+    "Readability calibration FK 60–70 across 16 languages",
     "JSON-LD schema (Article + FAQPage) with trust signals",
     "Full-stack deployment: Codespaces → EC2 → Amplify + HTTPS",
     "Anonymous incident data → public health dashboard",
@@ -316,7 +316,7 @@ export default function SeoGeo() {
             />
             <AnimStat value={14} suffix="" label={t("seo_geo.stat_articles")} />
             <AnimStat
-              value={12}
+              value={SUPPORTED_LANGUAGES.length}
               suffix=""
               label={t("seo_geo.stat_languages")}
             />
@@ -624,7 +624,7 @@ export default function SeoGeo() {
                   {
                     path: "/insights",
                     label: "Threat Library",
-                    desc: "14 articles · 12 languages",
+                    desc: "14 articles · 16 languages",
                   },
                   {
                     path: "/products",

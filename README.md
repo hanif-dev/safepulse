@@ -1,441 +1,270 @@
-# SafePulse – Anti-Scam & Digital Resilience Platform
+# 🛡️ SafePulse
 
-> A full-stack production-ready application: **Laravel 10 API** + **React 18 + Vite + TypeScript + TailwindCSS**
-> Runs zero-config in **GitHub Codespaces** · Deploys to **AWS Amplify** (frontend) + **AWS EC2** (backend)
+**Protecting Communities from Digital Threats**
 
----
+> SafePulse is an AI-assisted platform dedicated to detecting scams, preventing radicalization, and building digital resilience across Southeast Asia.
 
-## Table of Contents
-
-1. [Project Structure](#project-structure)
-2. [Tech Stack](#tech-stack)
-3. [Local Development in Codespaces](#local-development-in-codespaces)
-4. [Manual Commands Reference](#manual-commands-reference)
-5. [Database Migrations & Seeders](#database-migrations--seeders)
-6. [Building for Production](#building-for-production)
-7. [Deployment Guide](#deployment-guide)
-8. [API Reference](#api-reference)
-9. [Adding a New Language](#adding-a-new-language)
-10. [Accessibility Features](#accessibility-features)
-11. [Environment Variables Summary](#environment-variables-summary)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-AWS%20Amplify-blue?logo=amazonaws)](https://main.d1f2msb859ksi1.amplifyapp.com)
+[![API Status](https://img.shields.io/badge/API-HTTPS%20Live-brightgreen)](https://safepulse.duckdns.org/api/ping)
+[![Languages](https://img.shields.io/badge/Languages-16-purple)](#-languages-supported-16)
+[![Mistral AI](https://img.shields.io/badge/Mistral%20AI-Integrated-7C3AED)](https://mistral.ai)
+[![INTERPOL I-GRIP](https://img.shields.io/badge/INTERPOL-I--GRIP%20Aligned-003087)](https://www.interpol.int)
+[![ANSSI](https://img.shields.io/badge/ANSSI-Privacy%20Inspired-002395)](https://www.ssi.gouv.fr)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ---
 
-## Project Structure
+## Overview
 
-```
-safepulse/
-├── .devcontainer/
-│   ├── devcontainer.json        # Codespaces config: ports, postCreateCommand
-│   └── Dockerfile               # PHP 8.2 + Node LTS + SQLite
-├── backend/                     # Laravel 10 (API-only)
-│   ├── app/
-│   │   ├── Http/
-│   │   │   ├── Controllers/Api/ # ScamCheckerController, IncidentController, ArticleController, StatsController
-│   │   │   ├── Requests/        # ScamCheckRequest, StoreIncidentRequest
-│   │   │   └── Resources/       # ArticleResource, IncidentResource
-│   │   └── Models/              # Article, Incident
-│   ├── config/cors.php          # CORS – reads FRONTEND_URL from .env
-│   ├── database/
-│   │   ├── migrations/          # create_articles_table, create_incidents_table
-│   │   └── seeders/             # ArticleSeeder, DatabaseSeeder
-│   ├── routes/api.php           # All API route definitions
-│   └── .env.example
-├── frontend/                    # React 18 + Vite + TypeScript
-│   ├── src/
-│   │   ├── components/          # Navbar, Footer, StatCard, ScoreGauge…
-│   │   ├── hooks/               # useTheme, useFontSize, useTextToSpeech
-│   │   ├── i18n/                # react-i18next; en.json, id.json
-│   │   ├── pages/               # Home, Products, Impact, Evidence…
-│   │   └── services/api.ts      # Axios service layer
-│   ├── vite.config.ts
-│   ├── tailwind.config.js
-│   └── .env.example
-├── init_codespace.sh            # One-shot bootstrap (runs on Codespace create)
-├── .gitignore
-└── README.md
-```
+SafePulse is a **free, multilingual, public-health-oriented digital safety platform** built in Indonesia and deployed on AWS. It helps citizens, students, migrant workers, and vulnerable communities detect, report, and understand online threats.
+
+The platform treats online fraud and radicalization as a **public health epidemic** — applying community surveillance, early detection, and evidence-based intervention, inspired by the same model France applies to disease outbreaks.
+
+**What makes SafePulse different:**
+
+- Not a read-only awareness site — users interact with live tools during training sessions
+- Public health framing — anonymous incident data feeds a real-time community surveillance dashboard
+- Two-layer AI detection — rule engine + Mistral AI for context-aware multilingual analysis
+- Zero identity collection — GDPR-inspired: no name, email, or IP address ever stored
+- Trauma-informed design — built around the premise that victims deserve support, not judgment
+
+---
+
+## Features
+
+| Feature | Description |
+|---------|-------------|
+| Scam Checker | Two-layer detection: rule engine + Mistral AI. Catches Indonesian patterns (J&T, BRI, Shopee, BPJS, OTP harvesting, APK lures) across 16 languages |
+| Public Health Dashboard | Real-time anonymous incident maps aggregated across 8+ SEA countries |
+| Threat Library | 42+ evidence-based articles in 16 languages covering 10 crime domains |
+| Smart Incident Advisor | After submission: personalised advice, local resources, action checklist, Mistral AI contextual response |
+| Knowledge Base | Developer-curated trusted documents (INTERPOL, ICCT, OJK, BNPT, ANSSI, PPATK) feeding AI-powered advice |
+| Privacy by Design | GDPR-inspired: anonymous by default, data minimisation, no personal identifiers stored |
+| Accessible | WCAG 2.1 AA, RTL Arabic, Text-to-speech, Dark mode, Font size controls, Aksara Jawa script |
+| Admin Panel | Developer-only knowledge base management at /admin (X-Admin-Token protected) |
+
+---
+
+## Languages Supported (16)
+
+| Script Family | Languages |
+|---------------|-----------|
+| Latin | English, Bahasa Indonesia, Francais, Deutsch, Espanol, Filipino, Tieng Viet |
+| Arabic (RTL) | Arabic |
+| East and SE Asian | Chinese Simplified, Chinese Traditional, Japanese, Korean, Thai, Khmer |
+| Cyrillic | Russian |
+| Aksara Jawa | Javanese |
+
+---
+
+## Threat Library — 10 Crime Domains
+
+Articles cover the full scope of the curriculum framework:
+
+1. Phishing syndicates and AI-enabled fraud
+2. Romance scamming and sextortion
+3. Trafficking in persons and scam-compound recruitment
+4. Land-certificate fraud
+5. Money laundering and crypto-enabled crime
+6. CSAM and child exploitation awareness
+7. Cyberbullying prevention
+8. Violence-as-a-service and digital gang recruitment
+9. Pre-departure contract literacy for migrant workers
+10. Civic digital conflict and de-escalation
 
 ---
 
 ## Tech Stack
 
-| Layer       | Technology                                                 |
-| ----------- | ---------------------------------------------------------- |
-| Backend     | Laravel 10, PHP 8.2, API-only (no Blade)                   |
-| Database    | SQLite (dev) → MySQL/RDS (prod) – swap one `.env` variable |
-| Frontend    | React 18, Vite, TypeScript, TailwindCSS, react-router-dom  |
-| i18n        | react-i18next (EN + ID; extensible to JA, DE)              |
-| Charts      | Recharts                                                   |
-| Markdown    | react-markdown + remark-gfm                                |
-| Auth        | None – fully public API                                    |
-| Dev runtime | GitHub Codespaces (devcontainer)                           |
-| CI/CD       | AWS Amplify (frontend) + EC2 Free Tier (backend)           |
+**Backend:** Laravel 10, PHP 8.2, Mistral AI (mistral-small-latest), MySQL (production), SQLite (dev)
+
+**Frontend:** React 18, Vite, TypeScript, TailwindCSS, react-i18next
+
+**Infrastructure:** AWS EC2 (API), AWS Amplify (frontend CI/CD), DuckDNS + Let's Encrypt (HTTPS), GitHub Codespaces (dev)
 
 ---
 
-## Local Development in Codespaces
+## French Innovation Integration
 
-### Step 1 – Create a GitHub Repository
+SafePulse integrates French technological and institutional frameworks throughout its architecture:
 
-```bash
-gh repo create your-org/safepulse --public
-git clone https://github.com/your-org/safepulse
-git add . && git commit -m "Initial SafePulse commit" && git push
-```
-
-### Step 2 – Open in Codespaces
-
-1. On the GitHub repository page, click **Code → Codespaces → Create codespace on main**.
-2. GitHub will build the devcontainer using `.devcontainer/Dockerfile`.
-3. `postCreateCommand` automatically runs `init_codespace.sh` which:
-   - Runs `composer install` in `backend/`
-   - Creates `backend/.env` from `.env.example`
-   - Runs `php artisan key:generate`
-   - Creates `backend/database/database.sqlite`
-   - Runs `php artisan migrate --force`
-   - Runs `php artisan db:seed --force`
-   - Runs `npm install` in `frontend/`
-   - Creates `frontend/.env` from `.env.example`
-
-> ⏱ First build takes ~3–4 minutes. Subsequent opens are instant.
-
-### Step 3 – Start the Servers
-
-Open **two terminals** in VS Code:
-
-**Terminal 1 – Laravel API:**
-
-```bash
-cd /workspaces/safepulse/backend
-php artisan serve --host=0.0.0.0 --port=8000
-```
-
-**Terminal 2 – Vite Dev Server:**
-
-```bash
-cd /workspaces/safepulse/frontend
-npm install   # only needed on first run if init_codespace.sh hasn't run
-npm run dev -- --host 0.0.0.0 --port 5173
-```
-
-### Step 4 – View the App
-
-In the **Ports** panel (bottom of VS Code):
-
-- Port **5173** → Vite dev server → click 🌐 to open the app
-- Port **8000** → Laravel API → proxied internally by Vite
-
-> **CORS & Vite Proxy:** All `/api/*` requests from the React app are proxied by Vite to `http://localhost:8000`. `VITE_API_BASE_URL=/api` is correct for development.
+| Component | Institution | Role |
+|-----------|-------------|------|
+| Mistral AI | Mistral AI, Paris | Layer 2 scam detection — multilingual, context-aware NLP |
+| ANSSI Framework | French National Cybersecurity Agency | Privacy-by-design, zero-retention, SecNumCloud methodology |
+| INTERPOL I-GRIP | INTERPOL HQ, Lyon | Threat taxonomy alignment for incident reporting |
+| French Language UI | — | Full French interface for Francophone ASEAN communities |
+| GDPR-Inspired | European Union | Data minimisation, purpose limitation, anonymous by default |
 
 ---
 
-## Manual Commands Reference
+## Quick Start (Codespaces)
 
 ```bash
-# Re-run full setup from scratch
-bash /workspaces/safepulse/init_codespace.sh
+git clone https://github.com/hanif-dev/safepulse.git
+cd safepulse
 
 # Backend
 cd backend
-php artisan migrate:fresh --seed    # Wipe & reseed DB (safe to re-run)
-php artisan tinker                  # Interactive REPL
-php artisan route:list              # View all registered API routes
-php artisan config:clear            # Clear config cache after .env changes
-
-# Frontend
-cd frontend
-npm install             # Install dependencies
-npm run dev             # Start Vite dev server
-npm run build           # Production build → dist/
-npm run lint            # ESLint check
-```
-
-> ⚠️ **Do not run `php artisan db:seed` more than once** without running `migrate:fresh` first —
-> the `articles.slug` column is unique, and re-seeding will throw a `UniqueConstraintViolationException`.
-> Always use `php artisan migrate:fresh --seed` to reset and reseed cleanly.
-
----
-
-## Database Migrations & Seeders
-
-```bash
-cd /workspaces/safepulse/backend
-
-# Run all pending migrations
-php artisan migrate
-
-# Run migrations + all seeders (14 articles + incident data)
-php artisan migrate --seed
-
-# Wipe database and re-seed from scratch (recommended for dev resets)
-php artisan migrate:fresh --seed
-
-# Run only the article seeder
-php artisan db:seed --class=ArticleSeeder
-```
-
-### Switching to MySQL (Production)
-
-In `backend/.env`, change:
-
-```dotenv
-# SQLite (dev):
-# DB_CONNECTION=sqlite
-# DB_DATABASE=/workspaces/safepulse/backend/database/database.sqlite
-
-# MySQL (prod):
-DB_CONNECTION=mysql
-DB_HOST=your-rds-endpoint.amazonaws.com
-DB_PORT=3306
-DB_DATABASE=safepulse
-DB_USERNAME=admin
-DB_PASSWORD=your_secure_password
-```
-
-No migration changes required — all migrations are DB-agnostic.
-
----
-
-## Building for Production
-
-### Frontend (React → Static Files)
-
-```bash
-cd frontend
-
-# Set the production API URL:
-echo "VITE_API_BASE_URL=https://api.yourdomain.com/api" > .env
-
-# Build
-npm run build
-# Output: frontend/dist/  (static HTML/JS/CSS — deploy to Amplify)
-```
-
-### Backend (Laravel)
-
-```bash
-cd backend
-composer install --no-dev --optimize-autoloader
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
-```
-
----
-
-## Deployment Guide
-
-### Frontend → AWS Amplify (Static Hosting)
-
-1. Push your repo to GitHub.
-2. Go to **AWS Amplify Console → New App → Host web app**.
-3. Connect your GitHub repo; select the `main` branch.
-4. **Build settings (`amplify.yml`):**
-
-```yaml
-version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - cd frontend && npm ci
-    build:
-      commands:
-        - cd frontend && npm run build
-  artifacts:
-    baseDirectory: frontend/dist
-    files:
-      - "**/*"
-  cache:
-    paths:
-      - frontend/node_modules/**/*
-```
-
-5. Add environment variable in Amplify console:
-   `VITE_API_BASE_URL` = `https://api.yourdomain.com/api`
-6. Add a **Rewrites & Redirects** rule for SPA routing:
-   - Source: `</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|woff2|ttf|map|json)$)([^.]+$)/>`
-   - Target: `/index.html`
-   - Type: `200 (Rewrite)`
-
-### Backend → AWS EC2 Free Tier (t2.micro / t3.micro)
-
-```bash
-# On your EC2 instance (Ubuntu 22.04):
-
-# 1. Install dependencies
-sudo apt update
-sudo apt install -y php8.2 php8.2-cli php8.2-fpm php8.2-sqlite3 \
-  php8.2-mbstring php8.2-xml php8.2-zip php8.2-curl \
-  nginx git composer
-
-# 2. Clone & configure
-git clone https://github.com/your-org/safepulse.git /var/www/safepulse
-cd /var/www/safepulse/backend
-composer install --no-dev --optimize-autoloader
 cp .env.example .env
-
-# Edit .env — set APP_URL, DB_CONNECTION, FRONTEND_URL
-nano .env
-
 php artisan key:generate
 touch database/database.sqlite
 php artisan migrate --force
 php artisan db:seed --force
-php artisan config:cache
-php artisan route:cache
+php artisan db:seed --class=KnowledgeSeeder --force
+php artisan serve --host=0.0.0.0 --port=8000
 
-# 3. Set permissions
-sudo chown -R www-data:www-data /var/www/safepulse/backend/storage
-sudo chown -R www-data:www-data /var/www/safepulse/backend/bootstrap/cache
-sudo chmod -R 775 /var/www/safepulse/backend/storage
-sudo chmod -R 775 /var/www/safepulse/backend/bootstrap/cache
-
-# 4. Nginx config
-sudo nano /etc/nginx/sites-available/safepulse-api
+# Frontend (new terminal)
+cd ../frontend
+npm install
+npm run dev -- --host 0.0.0.0 --port 5173
 ```
 
-Nginx config content:
+Open http://localhost:5173
 
-```nginx
-server {
-    listen 80;
-    server_name api.yourdomain.com;
-    root /var/www/safepulse/backend/public;
-    index index.php;
+---
 
-    location / {
-        try_files $uri $uri/ /index.php?$query_string;
-    }
+## Environment Variables
 
-    location ~ \.php$ {
-        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
-        include fastcgi_params;
-        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
-    }
+**Codespaces:**
 
-    location ~ /\.ht {
-        deny all;
-    }
-}
+```
+APP_NAME=SafePulse
+APP_ENV=local
+APP_KEY=                         # php artisan key:generate
+APP_URL=http://localhost:8000
+DB_CONNECTION=sqlite
+DB_DATABASE=/workspaces/safepulse/backend/database/database.sqlite
+MISTRAL_API_KEY=                 # https://console.mistral.ai/ (optional)
+FRONTEND_URL=http://localhost:5173
+ADMIN_TOKEN=                     # openssl rand -hex 32
 ```
 
-```bash
-# 5. Enable site and reload Nginx
-sudo ln -s /etc/nginx/sites-available/safepulse-api /etc/nginx/sites-enabled/
-sudo nginx -t && sudo systemctl reload nginx
+**EC2 Production:**
+
+```
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=https://safepulse.duckdns.org
+DB_CONNECTION=mysql
+DB_DATABASE=safepulse
+DB_USERNAME=safepulse
+DB_PASSWORD=your_password
+MISTRAL_API_KEY=your_mistral_key
+FRONTEND_URL=https://main.d1f2msb859ksi1.amplifyapp.com
+ADMIN_TOKEN=your_secure_random_token
 ```
 
 ---
 
 ## API Reference
 
-All endpoints are under `/api/`.
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| GET | /api/ping | — | Health check |
+| GET | /api/articles | — | List articles (filter: category, language, search, page) |
+| GET | /api/articles/{slug} | — | Single article |
+| POST | /api/check-scam | — | Scam check with AI analysis |
+| POST | /api/incidents | — | Submit report, receive AI advice |
+| GET | /api/stats/overview | — | Dashboard statistics |
+| GET | /api/admin/knowledge/status | Token | Knowledge base status |
+| GET | /api/admin/knowledge | Token | List documents |
+| POST | /api/admin/knowledge | Token | Add document |
+| DELETE | /api/admin/knowledge/{id} | Token | Disable document |
 
-| Method | Endpoint               | Description                                       |
-| ------ | ---------------------- | ------------------------------------------------- |
-| GET    | `/api/ping`            | Health check                                      |
-| POST   | `/api/check-scam`      | Analyse message / URL / phone / account for fraud |
-| POST   | `/api/incidents`       | Submit anonymous incident report                  |
-| GET    | `/api/articles`        | List articles (`?category&language&search&page`)  |
-| GET    | `/api/articles/{slug}` | Get single article with full markdown body        |
-| GET    | `/api/stats/overview`  | Aggregated incident stats for dashboard           |
+Admin endpoints require header: `X-Admin-Token: your_token`
 
-**POST `/api/check-scam`** – Request body:
+**Scam Checker example:**
 
-```json
-{
-  "message_text": "You have won $1,000,000! Click here now!",
-  "url": "http://bit.ly/claim-prize",
-  "phone_number": "+44 700 1234567",
-  "bank_account": "0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
-}
+```bash
+curl -s -X POST https://safepulse.duckdns.org/api/check-scam \
+  -H 'Content-Type: application/json' \
+  -d '{"message_text":"Halo kak, saya dari J&T Express. Mohon dicek foto fisik paket melalui aplikasi pelacak resmi.","url":"https://jnt-tracking-resi.apk-download.test/cek-paket"}'
 ```
 
-**Response:**
+---
 
-```json
-{
-  "score": 85,
-  "level": "High",
-  "reasons": [
-    "High-risk phrase detected: \"you have won\"",
-    "URL uses insecure HTTP instead of HTTPS.",
-    "URL uses a shortener service – destination is hidden.",
-    "Phone prefix \"+44 70\" is associated with premium-rate scams.",
-    "Input matches a cryptocurrency wallet address – verify recipient carefully."
-  ]
-}
+## Database Seeding
+
+```bash
+php artisan db:seed --force                                        # All default seeders
+php artisan db:seed --class=ArticleSeeder --force                  # EN + ID articles
+php artisan db:seed --class=ArticleSeederMultilingual --force      # 28 articles, 14 languages
+php artisan db:seed --class=KnowledgeSeeder --force                # 14 trusted reference docs
 ```
 
-**POST `/api/incidents`** – Request body:
+---
 
-```json
-{
-  "category": "phishing",
-  "description": "Received a fake Shopee promo link asking for my OTP.",
-  "country": "ID",
-  "financial_loss_estimate": 0,
-  "health_impact_level": "low"
-}
-```
+## Admin Panel
 
-> Accepted `category` values: `phishing`, `investment`, `romance`, `radicalization`, `money_laundering`, `other`
+URL: `/admin` on the frontend. Requires `ADMIN_TOKEN`.
+
+Features: view/add/disable knowledge documents, system status (Mistral readiness, doc count by topic).
+
+Only add documents from verified sources: INTERPOL, UN, ICCT, BNPT, OJK, peer-reviewed journals.
 
 ---
 
-## Adding a New Language
+## Platform Metrics
 
-1. Create `frontend/src/i18n/locales/ja.json` (copy `en.json` and translate all strings).
-2. In `frontend/src/i18n/index.ts`:
-   ```ts
-   import ja from './locales/ja.json';
-   // add to resources:
-   resources: { en: ..., id: ..., ja: { translation: ja } },
-   supportedLngs: ['en', 'id', 'ja'],
-   ```
-3. In `frontend/src/components/Navbar.tsx`, add to `LANGUAGES` array:
-   ```ts
-   { code: 'ja', label: '日本語' },
-   ```
+| Metric | Value |
+|--------|-------|
+| People protected (est.) | 2,400,000+ |
+| Articles published | 42+ (16 languages) |
+| Languages | 16 |
+| Countries | 8 |
+| Incidents reported | 18,500+ |
+| Cost to users | Free, no ads, no login |
 
 ---
 
-## Accessibility Features
+## Roadmap
 
-| Feature              | Implementation                                                              |
-| -------------------- | --------------------------------------------------------------------------- |
-| Skip-to-content link | `<a href="#main-content">` in `index.html`, visually hidden until focused   |
-| Focus styles         | `*:focus-visible` ring via Tailwind in `index.css`                          |
-| ARIA labels          | All interactive controls have `aria-label` or associated `<label>`          |
-| Dark / high-contrast | `useTheme` hook toggles `dark` class on `<html>`                            |
-| Font-size control    | `useFontSize` hook cycles `font-size-md/lg/xl` on `<html>`                  |
-| Text-to-speech       | `useTextToSpeech` hook wraps `SpeechSynthesis` API; on article detail pages |
-| Keyboard navigation  | Full tab order; dropdowns have `aria-expanded`, `role="listbox"`            |
-| Semantic HTML        | `<header>`, `<main>`, `<nav>`, `<article>`, `<section>`, `<footer>`         |
-| WCAG colour contrast | Primary palette tested at AA for text on white and dark backgrounds         |
+| Phase | Timeline | Focus |
+|-------|----------|-------|
+| Phase 0 (done) | 2026 | Live platform, 16 languages, Mistral AI, smart advisor, admin panel |
+| Phase 1 | Q3 2026 | Workshop pilot (3 cities), mobile redesign, article expansion |
+| Phase 2 | Q4 2026 | BSSN/Kominfo API, INTERPOL I-GRIP module, 5 new SEA countries |
+| Phase 3 | 2027+ | Regional scale, university curriculum, 20+ languages, NGO model |
 
 ---
 
-## Environment Variables Summary
+## Research Background
 
-### `backend/.env`
+SafePulse is informed by ongoing academic work submitted to ISIRC (International Social Innovation Research Conference):
 
-| Variable        | Default (dev)                                            | Notes                            |
-| --------------- | -------------------------------------------------------- | -------------------------------- |
-| `APP_KEY`       | _(generated)_                                            | Run `php artisan key:generate`   |
-| `APP_URL`       | `http://localhost:8000`                                  | Set to production domain in prod |
-| `DB_CONNECTION` | `sqlite`                                                 | Change to `mysql` for production |
-| `DB_DATABASE`   | `/workspaces/safepulse/backend/database/database.sqlite` | Absolute path for SQLite         |
-| `FRONTEND_URL`  | `http://localhost:5173`                                  | Used by CORS config              |
+*"From Evidence Synthesis to Prevention Practice: A Trauma-Informed Curriculum Model for Digital Resilience, Transnational Crime Awareness and PCVE in Indonesia"*
 
-### `frontend/.env`
-
-| Variable            | Default (dev) | Notes                                              |
-| ------------------- | ------------- | -------------------------------------------------- |
-| `VITE_API_BASE_URL` | `/api`        | Proxied by Vite in dev; set full URL in production |
+The platform serves as a practical implementation vehicle for a four-track, trauma-informed curriculum covering 10 crime domains across a three-tier public-health prevention model — primary (community workshops), secondary (agency referral pathways), and tertiary (survivor-sensitive support).
 
 ---
 
-_SafePulse – Protecting communities through digital literacy and real-time scam detection._
+## Contributing
+
+- Translations — improving existing 16 languages or adding new ones
+- Articles — evidence-based content covering the 10 crime domains
+- Knowledge base — adding trusted institutional documents via admin panel
+- Code — bug fixes, accessibility improvements, new features
+
+---
+
+## License
+
+MIT License — see LICENSE
+
+---
+
+## Links
+
+| Resource | URL |
+|----------|-----|
+| Live Website | https://main.d1f2msb859ksi1.amplifyapp.com |
+| API | https://safepulse.duckdns.org/api/ping |
+| GitHub | https://github.com/hanif-dev/safepulse |
+| Mistral AI | https://mistral.ai |
+| ANSSI | https://www.ssi.gouv.fr |
+| INTERPOL I-GRIP | https://www.interpol.int/Crimes/Financial-crime/Online-scams |
+
+---
+
+*Built in Indonesia · Powered by French Innovation · For Southeast Asia's 600 million people*

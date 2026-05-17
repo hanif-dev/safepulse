@@ -95,6 +95,34 @@ const LANGUAGES = [
     flag: "🏝️",
     rtl: false,
   },
+  {
+    code: "th",
+    label: "Thai",
+    nativeLabel: "ไทย",
+    flag: "🇹🇭",
+    rtl: false,
+  },
+  {
+    code: "vi",
+    label: "Vietnamese",
+    nativeLabel: "Tiếng Việt",
+    flag: "🇻🇳",
+    rtl: false,
+  },
+  {
+    code: "tl",
+    label: "Filipino",
+    nativeLabel: "Filipino",
+    flag: "🇵🇭",
+    rtl: false,
+  },
+  {
+    code: "km",
+    label: "Khmer",
+    nativeLabel: "ខ្មែរ",
+    flag: "🇰🇭",
+    rtl: false,
+  },
 ];
 
 const RTL_LANGS = new Set(["ar"]);
