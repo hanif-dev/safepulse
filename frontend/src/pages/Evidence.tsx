@@ -72,18 +72,6 @@ const STUDIES = [
     color: 'bg-gray-50 dark:bg-gray-800/60 border-gray-200 dark:border-gray-700',
     tagColor: 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300',
   },
-  {
-    id: 7,
-    tag: 'Partnership',
-    flag: '🇫🇷',
-    title: 'Institut Français d\'Indonésie — Digital Safety Workshop Programme',
-    org: 'SafePulse × IFI Jakarta (Institut Français d\'Indonésie)',
-    summary: 'Collaboration with IFI Jakarta to deliver joint digital-safety workshops for Indonesian students, professionals, and entrepreneurs. SafePulse serves as the live hands-on tool during sessions — participants use the Scam Checker in real time, report practice incidents, and explore the Threat Library in both English and French.',
-    outcomes: ['Joint workshop curriculum developed', 'Bilingual EN/FR facilitation', 'Planned: 5 cities 2026'],
-    category: 'French Framework',
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800',
-    tagColor: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
-  },
 ];
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -109,7 +97,6 @@ export default function Evidence() {
               'ANSSI SecNumCloud (cybersecurity methodology)',
               'INTERPOL I-GRIP (Lyon, anti-fraud taxonomy)',
               'Mistral AI (Paris, multilingual LLM)',
-              'IFI Jakarta (workshop partnership)',
               'GDPR-inspired privacy architecture',
             ].map((item) => (
               <span key={item} className="bg-blue-100 dark:bg-blue-800/40 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full">
