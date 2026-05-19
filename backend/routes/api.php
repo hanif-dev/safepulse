@@ -37,3 +37,4 @@ Route::prefix('admin/knowledge')->group(function () {
     Route::put('/{id}',    [KnowledgeController::class, 'update']);
     Route::delete('/{id}', [KnowledgeController::class, 'destroy']);
 });
+Route::prefix('v2')->group(base_path('routes/api_v2.php'));
