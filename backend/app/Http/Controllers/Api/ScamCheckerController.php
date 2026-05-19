@@ -527,6 +527,20 @@ PROMPT;
             }
         }
 
+        // Path requests personal data — phishing endpoint signal
+        $phishingPaths = ["/form", "/login", "/update", "/data", "/verify", "/otp", "/konfirmasi", "/rekening", "/password"];
+        foreach ($phishingPaths as $path) {
+            if (str_contains($lower, $path)) {
+                $score    += 25;
+                $reasons[] = "URL path suggests data collection — common phishing endpoint.";
+                break;
+            }
+        }
+        // Multiple high-risk signals — compound boost
+        if ($score >= 55) {
+            $score    += 15;
+            $reasons[] = "Multiple high-risk signals combined — treat as High risk.";
+        }
         return [$score, $reasons];
     }
 

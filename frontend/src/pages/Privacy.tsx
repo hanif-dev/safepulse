@@ -176,8 +176,8 @@ export default function Privacy() {
         <section className="text-center py-6 border-t border-gray-100 dark:border-gray-800">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
             Questions about data handling? Contact us at{' '}
-            <a href="mailto:francealumni@ifi-id.com" className="text-primary-600 dark:text-primary-400 hover:underline">
-              francealumni@ifi-id.com
+            <a href="mailto:@gmail.com" className="text-primary-600 dark:text-primary-400 hover:underline">
+              @gmail.com
             </a>
           </p>
           <p className="text-xs text-gray-400 mt-2">
