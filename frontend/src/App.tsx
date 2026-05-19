@@ -18,6 +18,7 @@ import IncidentReport from "./pages/IncidentReport";
 import SeoGeo from "./pages/SeoGeo";
 import HowToIdentifyScams from "./pages/HowToIdentifyScams";
 import Privacy from "./pages/Privacy";
+import QuickFlow from "./pages/adaptive/QuickFlow";
 
 export default function App() {
   const { theme, toggle: toggleTheme } = useTheme();
@@ -46,6 +47,7 @@ export default function App() {
           />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/adaptive/quick" element={<QuickFlow />} />
         </Routes>
       </main>
 

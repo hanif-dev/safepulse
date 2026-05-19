@@ -189,6 +189,9 @@ export default function IncidentReport() {
             >
               Submit another report
             </button>
+            <Link to="/adaptive/quick" className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-2.5 rounded-xl flex items-center gap-2">
+                🧭 Get Personalized Recovery Plan
+              </Link>
             <Link to="/insights" className="text-primary-600 dark:text-primary-400 font-semibold px-6 py-2.5">
               Browse Threat Library →
             </Link>
