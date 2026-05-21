@@ -1,3 +1,4 @@
+import AIAssistant from './components/AIAssistant';
 import Admin from "./pages/Admin";
 import { Routes, Route } from "react-router-dom";
 import { useTheme } from "./hooks/useTheme";
@@ -30,6 +31,7 @@ export default function App() {
 
       <main id="main-content" className="flex-1">
         <Routes>
+        <AIAssistant />
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/impact" element={<Impact />} />

@@ -1,0 +1,28 @@
+# /etc/systemd/system/safepulse-ai.service
+#
+# Install:
+#   sudo cp docs/safepulse-ai.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable safepulse-ai
+#   sudo systemctl start safepulse-ai
+
+[Unit]
+Description=SafePulse Digital Resilience Assistant (Phase 3)
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/var/www/safepulse/safepulse-ai
+EnvironmentFile=/var/www/safepulse/safepulse-ai/.env
+ExecStart=/var/www/safepulse/safepulse-ai/venv/bin/uvicorn \
+    main:app \
+    --host 0.0.0.0 \
+    --port 8001 \
+    --workers 1 \
+    --log-level info
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
