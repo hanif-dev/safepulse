@@ -31,7 +31,7 @@ export default function App() {
 
       <main id="main-content" className="flex-1">
         <Routes>
-        <AIAssistant />
+        { /* <AIAssistant /> */ }
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/impact" element={<Impact />} />
