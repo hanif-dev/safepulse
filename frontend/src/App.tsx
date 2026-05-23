@@ -19,7 +19,6 @@ import SeoGeo from "./pages/SeoGeo";
 import HowToIdentifyScams from "./pages/HowToIdentifyScams";
 import Privacy from "./pages/Privacy";
 import QuickFlow from "./pages/adaptive/QuickFlow";
-import AIAssistant from "./components/AIAssistant";
 
 export default function App() {
   const { theme, toggle: toggleTheme } = useTheme();
